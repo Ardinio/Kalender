@@ -5,7 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" calendar="IE=edge">
     <meta name="viewport" calendar="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS style/base.css" />
+
+    <link rel="stylesheet" media="screen and (max-width: 1920px)" href="CSS Style/desktop.css" />
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="CSS Style/tablet.css" />
+    <link rel="stylesheet" media="screen and (max-width: 415px)" href="CSS Style/mobile.css" />
+
+
     <title>Document</title>
 </head>
 
@@ -19,37 +24,88 @@
 
 
         <div class="flex-row-between">
-            
+
             <!-- Left sidebar area -->
             <div class="sidebar">
-                <aside class="sidebar-left">
-                    <h2 class="sidebar__heading">Wednesday<br>April 6</h2>
-                    <ul class="sidebar__list">
-                        <li class="sidebar__list-item sidebar__list-item--complete"><span
-                                class="list-item__time">8.30</span>
-                            Team Meeting</li>
-                        <li class="sidebar__list-item sidebar__list-item--complete"><span
-                                class="list-item__time">10.00</span>
-                            Lunch with Sasha</li>
-                        <li class="sidebar__list-item"><span class="list-item__time">2.30</span> Design Review</li>
-                        <li class="sidebar__list-item"><span class="list-item__time">4.00</span> Get Groceries</li>
-                    </ul>
-                </aside>
-            </div>
+                <div class="time-block">
+                    <h2>Time, day etc.</h2>
+                </div>
 
-            <!-- Weekdays area -->
-            <div class="days-of-week">
-                <div>Söndag</div>
-                <div>Måndag</div>
-                <div>Tisdag</div>
-                <div>Onsdag</div>
-                <div>Torsdag</div>
-                <div>Fredag</div>
-                <div>Lördag</div>
+                <div class="todo-block">
+                    <h2>Schema för skola/Arbete (todos nedan)</h2>
+                </div>
             </div>
 
             <!-- Calendar main area -->
-            <div class="calendar">
+            <div class="calendar-grid">
+
+                <!-- Weekdays row -->
+                <div class="days-of-week">
+                    <div>Söndag</div>
+                    <div>Måndag</div>
+                    <div>Tisdag</div>
+                    <div>Onsdag</div>
+                    <div>Torsdag</div>
+                    <div>Fredag</div>
+                    <div>Lördag</div>
+                </div>
+
+                <!-- Weeks rows -->
+                <div class="calendar">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+
+                </div>
+
+
+
+            </div>
+
+
+
+
+
+
+
+            <!-- Calendar main area -->
+            <!-- <div class="calendar">
                 <div class="calendar-day">a</div>
                 <div class="calendar-day">b</div>
                 <div class="calendar-day">c</div>
@@ -74,8 +130,9 @@
                 <div class="calendar-day">d</div>
                 <div class="calendar-day">e</div>
             </div>
-        </div>
+ -->
 
+        </div>
     </div>
 </body>
 
