@@ -59,6 +59,7 @@ html, body {
     align-items: center;
 
     width: 100%;
+    min-width: 62rem;
     min-height: 5rem;
 
     color:white;
@@ -133,6 +134,8 @@ html, body {
         ;
 
     width: 100%;
+    min-width: 62rem;
+    height: 100%;
     background-color: rgb(134, 228, 58);
 }
 
