@@ -81,7 +81,7 @@ html, body {
     flex-shrink: 0;
 
     background-color: greenyellow; /*Ändra sen*/
-    width: 25%;
+    width: 23rem;
 }
 
 .sidebar > * {
@@ -98,7 +98,7 @@ html, body {
 
     text-align: center;
     width: 100%;
-    height: 33%;
+    height: 10rem;
 
     background-color: red; /*Ändra sen*/
 }
