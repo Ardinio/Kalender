@@ -1,0 +1,58 @@
+@media screen and (max-width: 780px) {
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+          'header header header header header header'
+          'calendar calendar calendar calendar calendar calendar ';
+        grid-gap: 0px;
+        padding: 0;
+        width: 100vw;
+        height: 100vh;
+      
+      
+      }
+
+      .calendar-container {
+        grid-area: calendar;
+        overflow: hidden;
+        margin-right: 0.5rem;
+        margin-left: 0.5rem;
+        margin-bottom: 0.5rem;
+        border-radius: 8px;
+        box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+      
+      }
+      
+   
+   
+    .menu-container {
+      display: none;
+    }
+    .hidden-menu{
+        display:flex; 
+    }
+
+    .day-of-week > * {
+        font-size: 0.5em;
+        color: var(--blue-grey-900);
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        font-variant: small-caps;
+        text-align: center;
+        width: var(--calendar-button-size-tablet);
+        justify-self:center;
+      
+      }
+
+      .date-grid button {
+        border: 0;
+        width:  var(--calendar-button-size-tablet);
+        height:  var(--calendar-button-size-tablet);
+        justify-self:center;
+        background-color: transparent;
+        color: var(--blue-grey-600);
+        text-align: center;
+        
+        
+      }
+  }
