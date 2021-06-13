@@ -1,0 +1,10 @@
+.header-container {
+  grid-area: header;
+  height: 4.7rem
+}
+
+.title {
+    color: var(--blue-grey-700);
+    text-align: center;
+    font-weight: 500;
+  }
