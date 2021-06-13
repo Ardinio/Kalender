@@ -1,0 +1,22 @@
+
+.active-day-event-container {
+
+    flex: 1;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: rgb(236, 243, 252);
+    border-radius: 8px;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    margin-bottom: .5rem;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.25;  
+    box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+}
+
+.active-day-event-content{
+    padding: 1rem;
+    justify-content: space-evenly;
+}
+
