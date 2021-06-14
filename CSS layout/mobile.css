@@ -1,0 +1,26 @@
+@media screen and (max-width: 480px) {
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+      'header header header header header header'
+      'menu menu menu menu menu menu ';
+    grid-gap: 0px;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+  
+  
+  }  
+  
+  
+  .calendar-container {
+    display: none;
+  }
+
+  .menu-container {
+    display:unset;
+  }
+  .hidden-menu{
+    display:none; 
+  }
+}
