@@ -1,26 +1,45 @@
-@media screen and (max-width: 480px) {
-  .grid-container {
-    display: grid;
-    grid-template-areas:
-      'header header header header header header'
-      'menu menu menu menu menu menu ';
-    grid-gap: 0px;
-    padding: 0;
-    width: 100vw;
-    height: 100vh;
-  
-  
-  }  
-  
-  
-  .calendar-container {
-      display: none;
-    }
+@media screen and (max-width: 376px) {
+   
+  body {
 
-    .menu-container {
-      display:unset;
-    }
-    .hidden-menu{
-        display:none; 
-    }
+    background: var(--teal-200);
+
   }
+  .calendar-container {
+    
+    visibility: hidden
+  }
+
+  .active-day-event-container {
+    background-color: var(--teal-200);
+    height: 25rem;
+  }
+
+
+  .active-day-event-content p {
+    font-size: .8rem;
+  }
+
+  .event-title {
+    font-size: 1.3rem;
+  }
+
+  .day-active {
+
+    font-size: 2rem;
+  }
+
+
+  .header-container {
+
+    background-size:cover;
+
+  }
+
+  .title {
+    color: var(--blue-grey-400);
+    font-size: 0.4rem;
+    text-shadow: 0 0 2px #fdfdfb, 0 0 4px #0e3486;
+  }
+
+}

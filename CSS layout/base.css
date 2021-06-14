@@ -22,8 +22,10 @@
     --blue-grey-700: #334e68;
     --blue-grey-800: #243b53;
     --blue-grey-900: #102a43;
-    --calendar-button-size:4.3rem;
-    --calendar-button-size-tablet:3.5rem;
+    --calendar-button-width-size:8.54rem;
+    --calendar-button-hight-size:5.65rem;
+    --calendar-button-tablet-width-size:4.7rem;
+    --calendar-button-tablet-hight-size:4.7rem;
     
     
   }
@@ -31,9 +33,6 @@
   
   html {
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-    font-size: 125%;
-    line-height: 1.4;
-    font-weight: 400;
     color: var(--blue-grey-900);
     
     
@@ -41,8 +40,7 @@
   
   body {
     
-    background: var(--white);
-    padding:0;
+    background: var(--teal-050);
     margin: 0;
     
     

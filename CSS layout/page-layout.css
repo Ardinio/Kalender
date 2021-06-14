@@ -8,19 +8,12 @@
 .grid-container {
   display: grid;
   grid-template-areas:
-    'header header header header header header'
-    'menu menu menu calendar calendar calendar ';
-  grid-gap: 0px;
-  padding: 0;
-  width: 100vw;
-  height: 100vh;
-
-
+    'header header'
+    'menu calendar';
+    overflow: hidden;
+    
 }
 
 .grid-container>div {
-  background-color: rgba(255, 255, 255, 0.8);
-  text-align: center;
-  font-size: 30px;
-
+  display: flex;
 }

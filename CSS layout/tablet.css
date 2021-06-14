@@ -1,58 +1,82 @@
-@media screen and (max-width: 780px) {
-    .grid-container {
-        display: grid;
-        grid-template-areas:
-          'header header header header header header'
-          'calendar calendar calendar calendar calendar calendar ';
-        grid-gap: 0px;
-        padding: 0;
-        width: 100vw;
-        height: 100vh;
-      
-      
-      }
+@media screen and (max-width: 540px) {
 
-      .calendar-container {
-        grid-area: calendar;
-        overflow: hidden;
-        margin-right: 0.5rem;
-        margin-left: 0.5rem;
-        margin-bottom: 0.5rem;
-        border-radius: 8px;
-        box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
-      
-      }
-      
-   
-   
-    .menu-container {
-      display: none;
-    }
-    .hidden-menu{
-        display:flex; 
-    }
+  body {
 
-    .day-of-week > * {
-        font-size: 0.5em;
-        color: var(--blue-grey-900);
-        font-weight: 500;
-        letter-spacing: 0.1em;
-        font-variant: small-caps;
-        text-align: center;
-        width: var(--calendar-button-size-tablet);
-        justify-self:center;
-      
-      }
+    background: var(--teal-100);
 
-      .date-grid button {
-        border: 0;
-        width:  var(--calendar-button-size-tablet);
-        height:  var(--calendar-button-size-tablet);
-        justify-self:center;
-        background-color: transparent;
-        color: var(--blue-grey-600);
-        text-align: center;
-        
-        
-      }
   }
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+      'header'
+      'menu'
+      'calendar';
+  }
+
+  .menu-container {
+    grid-area: menu; 
+   width: 100vw;
+    flex-direction: column;
+  }
+
+  .button-container{
+    justify-content:space-evenly;
+    align-items:center;
+    width:100%;
+  }
+
+  .button-container button {
+    
+    text-align: center;
+    width:45%;
+  }
+
+  .active-day-event-container {
+    background-color: rgb(236, 243, 252);
+    height: 8rem;
+    width: 32.6rem;
+  }
+  
+
+  .day-of-week>* {
+    font-size: .8em;
+    width: var(--calendar-button-tablet-width-size);
+  }
+
+  .date-grid button {
+    width: var(--calendar-button-tablet-width-size);
+    height: var(--calendar-button-tablet-hight-size);
+  }
+
+  .active-day-event-container {
+    background-color: var(--teal-200);
+  }
+
+
+  .active-day-event-content p {
+    font-size: .8rem;
+  }
+
+  .event-title {
+    font-size: 1.3rem;
+  }
+
+  .day-active {
+
+    font-size: 2rem;
+  }
+
+
+  .header-container {
+
+    background-size: 768px 118px;
+
+  }
+
+  .title {
+    color: var(--blue-grey-700);
+    font-size: 3rem;
+    text-shadow: 0 0 2px #fdfdfb, 0 0 4px #0e3486;
+  }
+
+}

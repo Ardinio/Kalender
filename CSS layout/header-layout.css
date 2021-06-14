@@ -1,15 +1,17 @@
 .header-container {
   grid-area: header;
-  height: 4.7rem
+  height: 4.7rem;
+  background: url(../images/78081-mountains-wallpaper-water-vector-green-cartoon-resources.png);
+  background-repeat: no-repeat;
+  background-size: 1219px 118px; 
+  justify-content: center;
+  align-items: center;
 }
 
 .title {
-    color: var(--blue-grey-700);
-    text-align: center;
-    font-weight: 500;
-  }
-
-  .hidden-menu {
-display: none;
-  
+    color: var(--white);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size:5rem;
+    font-variant: small-caps;
+    text-shadow: 0 0 3px #ff009d, 0 0 5px #00ff9d;
   }
