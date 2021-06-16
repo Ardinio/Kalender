@@ -1,10 +1,13 @@
-@media screen and (max-width: 540px) {
+@media (max-width: 768px) {
 
   body {
 
-    background: var(--teal-100);
+    background: url(../images/tabletbckg.jpg);
+    background-repeat: no-repeat;
+    background-size: 50rem 90rem; 
 
   }
+
   .grid-container {
     display: grid;
     grid-template-areas:
@@ -13,33 +16,32 @@
       'calendar';
   }
 
-  .menu-container {
-    grid-area: menu; 
-   width: 100vw;
-    flex-direction: column;
+  .header-container {
+    background-size: 64vh 8vh;
   }
 
-  .button-container{
-    justify-content:space-evenly;
-    align-items:center;
-    width:100%;
+
+  .button-container {
+    display: flex;
+    width: 100%;
   }
 
-  .button-container button {
-    
-    text-align: center;
-    width:45%;
+  .active-day {
+    height: 15rem;
+    background-color: transparent;
+
   }
 
-  .active-day-event-container {
-    background-color: rgb(236, 243, 252);
-    height: 8rem;
-    width: 32.6rem;
+
+
+  .active-day-toDo-container {
+    height: 11rem;
+    width: 100%;
   }
-  
+
 
   .day-of-week>* {
-    font-size: .8em;
+    font-size: 1.2em;
     width: var(--calendar-button-tablet-width-size);
   }
 
@@ -48,16 +50,11 @@
     height: var(--calendar-button-tablet-hight-size);
   }
 
-  .active-day-event-container {
-    background-color: var(--teal-200);
-  }
-
-
-  .active-day-event-content p {
+  .active-day-toDo-content p {
     font-size: .8rem;
   }
 
-  .event-title {
+  .toDo-title {
     font-size: 1.3rem;
   }
 
@@ -66,16 +63,8 @@
     font-size: 2rem;
   }
 
-
-  .header-container {
-
-    background-size: 768px 118px;
-
-  }
-
   .title {
-    color: var(--blue-grey-700);
-    font-size: 3rem;
+    font-size: 3.5rem;
     text-shadow: 0 0 2px #fdfdfb, 0 0 4px #0e3486;
   }
 

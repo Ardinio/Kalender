@@ -1,10 +1,4 @@
 
-
-
-
-
-
-
 .grid-container {
   display: grid;
   grid-template-areas:
@@ -16,4 +10,5 @@
 
 .grid-container>div {
   display: flex;
+
 }

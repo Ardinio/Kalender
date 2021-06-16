@@ -1,26 +1,63 @@
-@media screen and (max-width: 376px) {
+@media (max-width: 576px)  {
    
   body {
 
-    background: var(--teal-200);
+    background: url(../images/appbackground1.jpg);
+    background-repeat: no-repeat;
+    background-size: 37rem 67rem; 
 
   }
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+      'header'
+      'menu';
+  }
+  .menu-container {
+   
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    align-items: center;
+  
+  }
+  
   .calendar-container {
-    
-    visibility: hidden
+    position: absolute;
+    left: -9999px;
   }
 
-  .active-day-event-container {
-    background-color: var(--teal-200);
-    height: 25rem;
+  .active-day{
+    height: 28rem;
+    border-radius: 0px;
+    margin-bottom: 0rem;
+    margin-left: 0;
+    margin-right: 0;
+    line-height: 1.25;
+    border:hidden;
+    box-shadow: 0px 0px 0px 0px rgb(0 0 0 / 0%), 0px 0px 0px 0px rgb(0 0 0 / 0%), 0px 0px 0px 0px rgb(0 0 0 / 0%);
+background-color: transparent;
+  
   }
 
+  .active-day-toDo-container {
+    height: 18rem;
+    border-radius: 0px;
+    margin-bottom: 1.5rem;
+    margin-left: 0;
+    margin-right: 0;
+    line-height: 1.25;
+    border-top: 3px double var(--teal-400);
+    border-bottom: 3px double var(--teal-400);
+    box-shadow: 0px 0px 0px 0px rgb(0 0 0 / 0%), 0px 0px 0px 0px rgb(0 0 0 / 0%), 0px 0px 0px 0px rgb(0 0 0 / 0%);
+    background-color: #dff0f9;
+  }
 
-  .active-day-event-content p {
+  .active-day-toDo-content p {
     font-size: .8rem;
   }
 
-  .event-title {
+  .toDo-title {
     font-size: 1.3rem;
   }
 
@@ -30,15 +67,31 @@
   }
 
 
-  .header-container {
+  .button-container{
+    
+    flex-direction: column;
+    width:100%;
+  }
 
-    background-size:cover;
+  .button-container button {
+   
+    background-color: var(--white);
+    padding: .70em .70em;
+    font-size: 1.4rem;
+ 
+    margin-bottom: 0.8rem;
 
   }
 
+  .header-container {
+    background-size: 80vh 9.5vh; 
+  }
+
+  
+
   .title {
-    color: var(--blue-grey-400);
-    font-size: 0.4rem;
+    
+    font-size: 2.7rem;
     text-shadow: 0 0 2px #fdfdfb, 0 0 4px #0e3486;
   }
 

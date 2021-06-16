@@ -1,16 +1,22 @@
+@font-face {
+  font-family: headerLogotype-font;
+  src: url(../fonts/ARDESTINE.ttf);
+}
+
 .header-container {
   grid-area: header;
   height: 4.7rem;
-  background: url(../images/78081-mountains-wallpaper-water-vector-green-cartoon-resources.png);
+  background: url(../images/triangles.png);
+  filter: opacity(60%);
   background-repeat: no-repeat;
-  background-size: 1219px 118px; 
+  background-size: 212vh 16vh; 
   justify-content: center;
   align-items: center;
 }
 
 .title {
-    color: var(--white);
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: black;
+    font-family: headerLogotype-font,Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size:5rem;
     font-variant: small-caps;
     text-shadow: 0 0 3px #ff009d, 0 0 5px #00ff9d;
