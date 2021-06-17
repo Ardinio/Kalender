@@ -38,7 +38,9 @@
   
   body {
     
-    background: var(--teal-050);
+    background: url(../images/tabletbckg.jpg);
+    background-repeat: no-repeat;
+    background-size: 90rem 100rem; 
     margin: 0;
     
     
