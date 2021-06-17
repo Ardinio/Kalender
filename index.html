@@ -1,168 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="CSS layout/calendar-layout.css"> 
+  <link rel="stylesheet" href="CSS layout/calendar-layout.css">
   <link rel="stylesheet" href="CSS layout/menu-layout.css">
-  <link rel="stylesheet" href="CSS layout/page-layout.css"> 
+  <link rel="stylesheet" href="CSS layout/page-layout.css">
   <link rel="stylesheet" href="CSS layout/base.css">
   <link rel="stylesheet" href="CSS layout/header-layout.css">
   <link rel="stylesheet" href="CSS layout/mobile.css">
   <link rel="stylesheet" href="CSS layout/tablet.css">
+  <script src="JS-Files/main.js"></script>
+  <script src="JS-Files/todo.js"></script>
 
-    
   <title>Calendar</title>
 </head>
+
 <body>
-  
-<div class="grid-container">
-  <div class="header-container">
-    <div class="title">
-       Calendar
+
+  <div class="grid-container">
+    <div class="header-container">
+      <div class="title">
+        Calendar
+      </div>
+      <div class="hidden-menu">
+        <button id="Evenemang">Lägg till evenemang</button>
+        <button id="Helgdag">Lägg till helgdag</button>
+      </div>
     </div>
-    <div class="hidden-menu">
+    <div class="menu-container">
+      <div class="active-day-event-container">
+        <div class="active-day-event-content">
+          <div class="day-active">Måndag</div>
+          <div class="event-title">
+            Todo
+          </div>
+          <ul id="TodoList">
+            <template id="todo-item-template">
+
+            </template>
+          </ul>
+        </div>
+      </div>
+
       <button id="Evenemang">Lägg till evenemang</button>
       <button id="Helgdag">Lägg till helgdag</button>
+
+    </div>
+    <div class="calendar-container">
+      <div class="calendar">
+        <div class="day-of-week">
+          <div>Söndag</div>
+          <div>Måndag</div>
+          <div>Tisdag</div>
+          <div>Onsdag</div>
+          <div>Torsdag</div>
+          <div>Fredag</div>
+          <div>Lördag</div>
+        </div>
+
+        <div class="date-grid">
+          <button>
+            <time datetime="2019-01-30">30</time>
+          </button>
+          <button>
+            <time datetime="2019-02-01">31</time>
+          </button>
+          <button>
+            <time datetime="2019-02-01">1</time>
+          </button>
+          <button>
+            <time datetime="2019-02-02">2</time>
+          </button>
+          <button>
+            <time datetime="2019-02-03">3</time>
+          </button>
+          <button>
+            <time datetime="2019-02-04">4</time>
+          </button>
+          <button>
+            <time datetime="2019-02-05">5</time>
+          </button>
+          <button>
+            <time datetime="2019-02-06">6</time>
+          </button>
+          <button>
+            <time datetime="2019-02-07">7</time>
+          </button>
+          <button>
+            <time datetime="2019-02-08">8</time>
+          </button>
+          <button>
+            <time datetime="2019-02-09">9</time>
+          </button>
+          <button>
+            <time datetime="2019-02-10">10</time>
+          </button>
+          <button>
+            <time datetime="2019-02-11">11</time>
+          </button>
+          <button>
+            <time datetime="2019-02-12">12</time>
+          </button>
+          <button>
+            <time datetime="2019-02-13">13</time>
+          </button>
+          <button>
+            <time datetime="2019-02-14">14</time>
+          </button>
+          <button>
+            <time datetime="2019-02-15">15</time>
+          </button>
+          <button>
+            <time datetime="2019-02-16">16</time>
+          </button>
+          <button>
+            <time datetime="2019-02-17">17</time>
+          </button>
+          <button>
+            <time datetime="2019-02-18">18</time>
+          </button>
+          <button>
+            <time datetime="2019-02-19">19</time>
+          </button>
+          <button>
+            <time datetime="2019-02-20">20</time>
+          </button>
+          <button>
+            <time datetime="2019-02-21">21</time>
+          </button>
+          <button>
+            <time datetime="2019-02-22">22</time>
+          </button>
+          <button>
+            <time datetime="2019-02-23">23</time>
+          </button>
+          <button>
+            <time datetime="2019-02-24">24</time>
+          </button>
+          <button>
+            <time datetime="2019-02-25">25</time>
+          </button>
+          <button>
+            <time datetime="2019-02-26">26</time>
+          </button>
+          <button>
+            <time datetime="2019-02-27">27</time>
+          </button>
+          <button>
+            <time datetime="2019-02-28">28</time>
+          </button>
+          <button>
+            <time datetime="2019-02-28">29</time>
+          </button>
+          <button>
+            <time datetime="2019-02-28">30</time>
+          </button>
+          <button>
+            <time datetime="2019-02-28">1</time>
+          </button>
+          <button>
+            <time datetime="2019-02-28">2</time>
+          </button>
+          <button>
+            <time datetime="2019-02-28">3</time>
+          </button>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="menu-container">
-    <div class="active-day-event-container">
-      <div class="active-day-event-content">
-        <div class="day-active">Måndag</div>
-      <div class="event-title">
-        Todo
-      </div>
-     <p>Bla bla bla </p> 
-      </div>
-    </div>
-
-    <button id="Evenemang">Lägg till evenemang</button>
-    <button id="Helgdag">Lägg till helgdag</button>
-    
-  </div>
-  <div class="calendar-container">
-    <div class="calendar">
-      <div class="day-of-week">
-        <div>Söndag</div>
-        <div>Måndag</div>
-        <div>Tisdag</div>
-        <div>Onsdag</div>
-        <div>Torsdag</div>
-        <div>Fredag</div>
-        <div>Lördag</div>
-      </div>
-
-      <div class="date-grid">
-        <button>
-          <time datetime="2019-01-30">30</time>
-        </button>
-        <button>
-          <time datetime="2019-02-01">31</time>
-        </button>
-        <button>
-          <time datetime="2019-02-01">1</time>
-        </button>
-        <button>
-          <time datetime="2019-02-02">2</time>
-        </button>
-        <button>
-          <time datetime="2019-02-03">3</time>
-        </button>
-        <button>
-          <time datetime="2019-02-04">4</time>
-        </button>
-        <button>
-          <time datetime="2019-02-05">5</time>
-        </button>
-        <button>
-          <time datetime="2019-02-06">6</time>
-        </button>
-        <button>
-          <time datetime="2019-02-07">7</time>
-        </button>
-        <button>
-          <time datetime="2019-02-08">8</time>
-        </button>
-        <button>
-          <time datetime="2019-02-09">9</time>
-        </button>
-        <button>
-          <time datetime="2019-02-10">10</time>
-        </button>
-        <button>
-          <time datetime="2019-02-11">11</time>
-        </button>
-        <button>
-          <time datetime="2019-02-12">12</time>
-        </button>
-        <button>
-          <time datetime="2019-02-13">13</time>
-        </button>
-        <button>
-          <time datetime="2019-02-14">14</time>
-        </button>
-        <button>
-          <time datetime="2019-02-15">15</time>
-        </button>
-        <button>
-          <time datetime="2019-02-16">16</time>
-        </button>
-        <button>
-          <time datetime="2019-02-17">17</time>
-        </button>
-        <button>
-          <time datetime="2019-02-18">18</time>
-        </button>
-        <button>
-          <time datetime="2019-02-19">19</time>
-        </button>
-        <button>
-          <time datetime="2019-02-20">20</time>
-        </button>
-        <button>
-          <time datetime="2019-02-21">21</time>
-        </button>
-        <button>
-          <time datetime="2019-02-22">22</time>
-        </button>
-        <button>
-          <time datetime="2019-02-23">23</time>
-        </button>
-        <button>
-          <time datetime="2019-02-24">24</time>
-        </button>
-        <button>
-          <time datetime="2019-02-25">25</time>
-        </button>
-        <button>
-          <time datetime="2019-02-26">26</time>
-        </button>
-        <button>
-          <time datetime="2019-02-27">27</time>
-        </button>
-        <button>
-          <time datetime="2019-02-28">28</time>
-        </button>
-        <button>
-          <time datetime="2019-02-28">29</time>
-        </button>
-        <button>
-          <time datetime="2019-02-28">30</time>
-        </button>
-        <button>
-          <time datetime="2019-02-28">1</time>
-        </button>
-        <button>
-          <time datetime="2019-02-28">2</time>
-        </button>
-        <button>
-          <time datetime="2019-02-28">3</time>
-        </button>
-      </div>
-    </div>
-  </div>  
-</div>
 </body>
+
 </html>
