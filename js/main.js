@@ -1,6 +1,10 @@
 window.addEventListener('load', main);
 
 function main() {
-    updateDateTime();
-    sayHello();
+    runFunctionAtInterval(displayTime, 1000);
+    displayDate();
 }
+
+
+
+

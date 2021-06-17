@@ -1,27 +1,31 @@
 
-function getDateTime() {
-    return new Date().toLocaleString();
+function getTime() {
+    return new Date().toLocaleTimeString();
 }
 
-function createDateTimeElement(dateTime) {
-
-    let todayElement = document.querySelector(".active-day-event-content");
-    todayElement.innerHTML = "";
-    todayElement.append(dateTime);
+function getDate() {
+    return new Date().toLocaleDateString();
 }
 
-function displayDateTime() {
-    let changableTime = getDateTime();
-    createDateTimeElement(changableTime);
+function displayTime() {
+    let time = getTime();
+    appendSingleElement(time, ".active-day-event-content")
 }
 
-function updateDateTime() {
-    displayDateTime();
-    setInterval(displayDateTime, 1000);
+function displayDate() {
+    let date = getDate();
+    appendSingleElement(date, ".day-active")
 }
 
-function sayHello() {
-    let todayElement = document.querySelector(".day-active");
-    todayElement.append("Hello");
+
+function runFunctionAtInterval(functionName, milliseconds) {
+    functionName();
+    setInterval(functionName, milliseconds);
 }
 
+function appendSingleElement(elementToAppend, parentSelector) {
+
+    let parentElement = document.querySelector(parentSelector);
+    parentElement.innerHTML = "";
+    parentElement.append(elementToAppend);
+}
