@@ -1,5 +1,6 @@
 window.addEventListener('load', main);
 
 function main() {
-    displayDateTime();
+    updateDateTime();
+    sayHello();
 }
