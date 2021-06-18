@@ -1,18 +1,21 @@
+@font-face {
+  font-family: calenderNumbers-font;
+  src: url(../fonts/CALENDAR.TTF);
+}
+
 
 .calendar-container {
   grid-area: calendar;
+  width: min-content;
+  height: min-content;
   overflow: hidden;
-  margin-right: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin: var(--margin-spacing);
   border-radius: 8px;
+  border-style: solid;
+  border: size 1px;
+  border-color: var(--teal-600);
   box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
 }
-
-.calendar {
-  background-color: #f5f6f8;
-  height: 100%;
-}
-
 
 .day-active {
   color: var(--blue-grey-700);
@@ -29,20 +32,22 @@
 
 
 .day-of-week > * {
-  font-size: 0.7em;
+  font-size: 1.2em;
   color: var(--blue-grey-900);
   font-weight: 500;
   letter-spacing: 0.1em;
   font-variant: small-caps;
   text-align: center;
-  width: var(--calendar-button-size);
-  justify-self:center;
+  padding-bottom: .2rem;
+  padding-top: .2rem;
+  background-color: #d0e4e3;
+  width: var(--calendar-button-width-size);
+
 }
 
 
 /* Datum */
 .date-grid {
-  margin-top: 0.5em;
   background-image: url(../images/sea-edge.png); 
 }
 
@@ -54,13 +59,54 @@
 
 .date-grid button {
   border: 0;
-  width:  var(--calendar-button-size);
-  height:  var(--calendar-button-size);
-  justify-self:center;
+  width:  var(--calendar-button-width-size);
+  height:  var(--calendar-button-hight-size);
   background-color: transparent;
-  color: var(--blue-grey-600);
-  text-align: center; 
+  border-bottom: 3px solid var(--teal-400);
+  border-radius: 0px 0px 85px 0px; 
+  box-shadow: 17px 11px 22px 4px rgba(154,154,154,0.85);
+  cursor: pointer;
 }
+#amountOfToDos{
+  font-family:Arial, Helvetica, sans-serif;
+  color:rgb(180, 5, 5);
+  position: relative;
+  left: -1rem;
+  top: 1rem;
+  width: 1rem;
+}
+.date-grid button img {
+  position: relative;
+  left: -.5rem;
+  top: 2rem;
+  width: 2.5rem;
+  filter: opacity(60%);
+}
+
+
+
+.dateNr{
+  display: flex;
+  color: var(--blue-grey-900);
+  align-items:top;
+  justify-content:left;
+  padding-left: .8vw;
+  padding-top: .8vw;
+  font-family: calenderNumbers-font;
+  font-size: 1.5rem;
+}
+
+.dateNrOtherMonthDays{
+  display: flex;
+  color: var(--blue-grey-500);
+  align-items:top;
+  justify-content:left;
+  padding-left: .8vw;
+  padding-top: .8vw;
+  font-family: calenderNumbers-font;
+  font-size: 1.5rem;
+}
+
 
 .date-grid button:hover,
 .date-grid button:focus {
@@ -73,4 +119,8 @@
 .date-grid button.is-selected {
   background-color: var(--teal-100);
   color: var(--teal-900);
+  border-right: 2px  solid var(--teal-500);
+  border-bottom: 3px  solid var(--teal-500);
+  border-radius: 0px 0px 85px 0px; 
+  box-shadow: 17px 11px 22px 4px rgba(154,154,154,0.85);
 }
