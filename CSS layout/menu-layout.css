@@ -68,6 +68,16 @@
   align-items: center;
   width: 100%;
 }
+
+.active-day-content-date {
+
+}
+
+.active-day-content-clock {
+  
+}
+
+
 .active-day-toDo-container {
   flex-grow: 1;
   display: flex;

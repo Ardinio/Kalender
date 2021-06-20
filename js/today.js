@@ -64,12 +64,12 @@ function getYear() {
 
 function displayTime() {
     let time = getTime();
-    appendSingleElement(time, ".active-day-content")
+    appendSingleElement(time, ".active-day-content-clock")
 }
 
 function displayDate() {
     let date = getWeekday() + ", " + getDate() + " " + getMonth() + " " + getYear();
-    appendSingleElement(date, ".day-active")
+    appendSingleElement(date, ".active-day-content-date")
 }
 
 
