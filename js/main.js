@@ -5,6 +5,7 @@ function main() {
     runFunctionAtInterval(displayDate, (86400000));
     initTodos()
 }
+
 const state = {
     todos: [{
         text: 'Ska jobba med skola',
