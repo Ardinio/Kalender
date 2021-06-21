@@ -67,7 +67,7 @@
   box-shadow: 17px 11px 22px 4px rgba(154,154,154,0.85);
   cursor: pointer;
 }
-#amountOfToDos{
+.amountOfToDos{
   font-family:Arial, Helvetica, sans-serif;
   color:rgb(180, 5, 5);
   position: relative;

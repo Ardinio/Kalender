@@ -47,6 +47,7 @@ function removeTodo(todo) {
     const index = state.todos.indexOf(todo)
     state.todos.splice(index, 1)
     renderTodoList();
+    updateTodoNumber(); //Måste hitta rätt calendarelement för viss todo item.
 }
 
 function sameDay(d1, d2) {
@@ -71,7 +72,10 @@ function setSelectedDate(event) {
 function addTodo(event) {
     if (event.target.className == "dateNr") {
         let newTodo = createNewTodo(state.selectedDate);
-        if (newTodo !== undefined) state.todos.push(newTodo);
+        if (newTodo !== undefined) {
+            state.todos.push(newTodo);
+            updateTodoNumber(event.target);
+        }
         renderTodoList();
     }
 }
@@ -79,12 +83,17 @@ function addTodo(event) {
 function getCalendarDate(calendarDayElement) {
     let dateString = calendarDayElement.querySelector("time").dateTime;
     let dateArray = dateString.split("-");
-    return new Date(dateArray[0], dateArray[1], dateArray[2]);
+    return new Date(dateArray[0], dateArray[1] - 1, dateArray[2]);
 }
 
 function createNewTodo(todoDate) {
     let todoMessage = prompt("Please enter item to do.", "");
     if (todoMessage !== null && todoMessage != "") {
         return { text: todoMessage, date: todoDate };
-    } 
+    }
+}
+
+function updateTodoNumber(calendarDayElement) {
+    let numOfTodos = filterTodoListBySelectedDate(state.todos).length;
+    calendarDayElement.querySelector(".amountOfToDos").innerText = numOfTodos;
 }
