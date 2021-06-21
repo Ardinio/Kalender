@@ -1,4 +1,3 @@
-/** Entry point for our todo code */
 function initTodos() {
     renderTodoList();
 }
@@ -52,16 +51,4 @@ function sameDay(d1, d2) {
     return d1.getFullYear() === d2.getFullYear() &&
         d1.getMonth() === d2.getMonth() &&
         d1.getDate() === d2.getDate();
-}
-
-function buttonPressed() {
-    parent = document.querySelectorAll('.parent');
-    var txt;
-    var person = prompt("Please enter a todo:", "");
-    if (person == null || person == "") {
-        txt = "User cancelled the prompt.";
-    } else {
-        txt = person;
-    }
-    document.getElementsByClassName("date-grid").append('button')
 }
