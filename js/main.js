@@ -9,13 +9,13 @@ function main() {
 const state = {
     todos: [{
         text: 'Ska jobba med skola',
-        date: new Date('2021.06-17')
+        date: new Date(2021, 06, 05)
     }, {
         text: 'Lorem ipsum dolor elit.',
-        date: new Date('2021-06-20')
+        date: new Date(2021, 06, 01)
     }, {
         text: 'Lorem ipsum adipisicing elit.',
-        date: new Date('2021-06-03')
+        date: new Date(2021, 06, 21)
     }],
     selectedDate: undefined
 }

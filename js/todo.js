@@ -77,7 +77,9 @@ function addTodo(event) {
 }
 
 function getCalendarDate(calendarDayElement) {
-    return calendarDayElement.querySelector("time").innerText;
+    let dateString = calendarDayElement.querySelector("time").dateTime;
+    let dateArray = dateString.split("-");
+    return new Date(dateArray[0], dateArray[1], dateArray[2]);
 }
 
 function createNewTodo(todoDate) {
