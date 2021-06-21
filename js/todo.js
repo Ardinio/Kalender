@@ -1,6 +1,7 @@
 /** Entry point for our todo code */
 function initTodos() {
     renderTodoList();
+    listenToCalendarClicks();
 }
 
 function renderTodoList() {
@@ -54,14 +55,30 @@ function sameDay(d1, d2) {
         d1.getDate() === d2.getDate();
 }
 
-function buttonPressed() {
-    parent = document.querySelectorAll('.parent');
-    var txt;
-    var person = prompt("Please enter a todo:", "");
-    if (person == null || person == "") {
-        txt = "User cancelled the prompt.";
-    } else {
-        txt = person;
+//----------------------------------------------------------------
+
+
+function listenToCalendarClicks() {
+    let calendar = document.querySelector(".date-grid");
+    calendar.addEventListener("click", addTodo);
+}
+
+function addTodo(event) {
+    if (event.target.className == "dateNr") {
+        let selectedDate = getCalendarDate(event.target);
+        let newTodo = createNewTodo(selectedDate);
+        if (newTodo !== undefined) state.todos.push(newTodo);
+        renderTodoList();
     }
-    document.getElementsByClassName("date-grid").append('button')
+}
+
+function getCalendarDate(calendarDayElement) {
+    return calendarDayElement.querySelector("time").innerText;
+}
+
+function createNewTodo(todoDate) {
+    let todoMessage = prompt("Please enter item to do.", "");
+    if (todoMessage !== null && todoMessage != "") {
+        return { text: todoMessage, date: todoDate };
+    } 
 }
