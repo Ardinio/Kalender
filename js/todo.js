@@ -60,13 +60,17 @@ function sameDay(d1, d2) {
 
 function listenToCalendarClicks() {
     let calendar = document.querySelector(".date-grid");
+    calendar.addEventListener("click", setSelectedDate);
     calendar.addEventListener("click", addTodo);
+}
+
+function setSelectedDate(event) {
+    state.selectedDate = getCalendarDate(event.target);
 }
 
 function addTodo(event) {
     if (event.target.className == "dateNr") {
-        let selectedDate = getCalendarDate(event.target);
-        let newTodo = createNewTodo(selectedDate);
+        let newTodo = createNewTodo(state.selectedDate);
         if (newTodo !== undefined) state.todos.push(newTodo);
         renderTodoList();
     }
