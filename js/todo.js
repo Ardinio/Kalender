@@ -1,5 +1,6 @@
 function initTodos() {
     renderTodoList();
+    listenToCalendarClicks();
 }
 
 function renderTodoList() {
@@ -51,4 +52,40 @@ function sameDay(d1, d2) {
     return d1.getFullYear() === d2.getFullYear() &&
         d1.getMonth() === d2.getMonth() &&
         d1.getDate() === d2.getDate();
+}
+
+//----------------------------------------------------------------
+
+function listenToCalendarClicks() {
+    let calendar = document.querySelectorAll(".date-grid .dateNr");
+    for (let i = 0; i < calendar.length; i++) {
+        calendar[i].addEventListener("click", setSelectedDate);
+        calendar[i].addEventListener("click", addTodo);
+    }
+}
+
+function setSelectedDate(event) {
+    state.selectedDate = getCalendarDate(event.target);
+    renderTodoList();
+}
+
+function addTodo(event) {
+    if (event.target.className == "buttonImg") {
+        let newTodo = createNewTodo(state.selectedDate);
+        if (newTodo !== undefined) state.todos.push(newTodo);
+        renderTodoList();
+    }
+}
+
+function getCalendarDate(calendarDayElement) {
+    let dateString = calendarDayElement.querySelector("time").dateTime;
+    let dateArray = dateString.split("-");
+    return new Date(dateArray[0], dateArray[1], dateArray[2]);
+}
+
+function createNewTodo(todoDate) {
+    let todoMessage = prompt("Please enter item to do.", "");
+    if (todoMessage !== null && todoMessage != "") {
+        return { text: todoMessage, date: todoDate };
+    }
 }
