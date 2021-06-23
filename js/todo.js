@@ -1,6 +1,6 @@
 function initTodos() {
     renderTodoList();
-    listenToCalendarClicks();
+    listenToClicks();
 }
 
 function renderTodoList() {
@@ -46,6 +46,9 @@ function removeTodo(todo) {
     const index = state.todos.indexOf(todo)
     state.todos.splice(index, 1)
     renderTodoList();
+
+    let calendarDayElement = findCalendarDateElement(todo.date);
+    if (!isMobileDevice) updateTodoNumber(calendarDayElement);
 }
 
 function sameDay(d1, d2) {
@@ -56,11 +59,23 @@ function sameDay(d1, d2) {
 
 //----------------------------------------------------------------
 
-function listenToCalendarClicks() {
-    let calendar = document.querySelectorAll(".date-grid .dateNr");
-    for (let i = 0; i < calendar.length; i++) {
-        calendar[i].addEventListener("click", setSelectedDate);
-        calendar[i].addEventListener("click", addTodo);
+
+function listenToClicks() {
+    if (isMobileDevice) {
+        let button = document.querySelector(".Evenemang");
+        button.addEventListener("click", addTodo);
+    }
+    else {
+        let calendar = document.querySelectorAll(".date-grid .dateNr");
+        for (let i = 0; i < calendar.length; i++) {
+            calendar[i].addEventListener("click", setSelectedDate);
+        }
+
+        let image = document.querySelectorAll(".date-grid .dateNr .buttonImg");
+        for (let j = 0; j < image.length; j++) {
+            image[j].addEventListener("click", setSelectedDate);
+            image[j].addEventListener("click", addTodo);
+        }
     }
 }
 
@@ -70,22 +85,67 @@ function setSelectedDate(event) {
 }
 
 function addTodo(event) {
-    if (event.target.className == "buttonImg") {
-        let newTodo = createNewTodo(state.selectedDate);
-        if (newTodo !== undefined) state.todos.push(newTodo);
-        renderTodoList();
-    }
+    // if (event.target.className == "buttonImg") {
+    //     let newTodo = createNewTodo(state.selectedDate);
+    //     if (newTodo !== undefined) state.todos.push(newTodo);
+    //     renderTodoList();
+    // }
+    let buttonClass = getButtonClass();
+    // if (event.target.className !== buttonClass) return;
+
+    let todoMessage;
+    let todoDate;
+    let newTodo;
+
+    if (isMobileDevice) todoDate = createNewTodoDate();
+    else todoDate = state.selectedDate;
+    if (todoDate !== undefined) todoMessage = createNewTodoMessage();
+    newTodo = createNewTodo(todoMessage, todoDate);
+
+    if (newTodo !== undefined) state.todos.push(newTodo);
+    if (!isMobileDevice) updateTodoNumber(event.target);
+    renderTodoList();
 }
 
 function getCalendarDate(calendarDayElement) {
     let dateString = calendarDayElement.querySelector("time").dateTime;
     let dateArray = dateString.split("-");
-    return new Date(dateArray[0], dateArray[1], dateArray[2]);
+    return new Date(dateArray[0], dateArray[1] - 1, dateArray[2]);
 }
 
-function createNewTodo(todoDate) {
+function createNewTodo(todoMessage, todoDate) {
+    return { text: todoMessage, date: todoDate };
+}
+
+function createNewTodoMessage() {
     let todoMessage = prompt("Please enter item to do.", "");
     if (todoMessage !== null && todoMessage != "") {
-        return { text: todoMessage, date: todoDate };
+        return todoMessage;
     }
+}
+
+function createNewTodoDate() {
+    let todoDate = prompt("Please enter date for Todo item.", "yyyy-mm-dd");
+    let dateArray;
+    if (todoDate !== null && todoDate != "") {
+        dateArray = todoDate.split("-");
+        return new Date(dateArray[0], dateArray[1] - 1, dateArray[2]); //Saknar felhantering
+    }
+}
+
+function updateTodoNumber(calendarDayElement) {
+    let numOfTodos = filterTodoListBySelectedDate(state.todos).length;
+    calendarDayElement.querySelector(".amountOfToDos").innerText = numOfTodos;
+}
+
+function findCalendarDateElement(date) {
+    let elements = document.querySelectorAll(".dateNr");
+    let elementsArray = Array.from(elements.values());
+
+    return elementsArray[date.getDate() - 1];
+}
+
+function getButtonClass() {
+    if (isMobileDevice) return "Evenemang";
+    else return "buttonImg";
 }
