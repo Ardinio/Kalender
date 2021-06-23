@@ -37,7 +37,8 @@ function createTodoElement(todo) {
     const li = document.createElement('li');
     li.innerText = todo.text;
     const button = document.createElement('button');
-    button.innerText = 'Remove';
+    button.classList.add("removeBtn"); 
+    button.innerHTML = '<img src="images/icons/removeicon.png" />';
     button.addEventListener('click', () => removeTodo(todo));
     li.append(button);
     return li;
