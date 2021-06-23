@@ -6,6 +6,11 @@ function main() {
     initTodos()
 }
 
+function isMobileWidth() {
+    let isMobile = window.matchMedia('(max-width: 576px)');
+    return isMobile.matches;
+}
+
 const state = {
     todos: [{
         text: 'Ska jobba med skola',
@@ -19,3 +24,5 @@ const state = {
     }],
     selectedDate: undefined
 }
+
+const isMobileDevice = isMobileWidth();

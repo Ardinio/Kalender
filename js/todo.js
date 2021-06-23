@@ -1,7 +1,7 @@
 /** Entry point for our todo code */
 function initTodos() {
     renderTodoList();
-    listenToCalendarClicks();
+    listenToClicks();
 }
 
 function renderTodoList() {
@@ -49,7 +49,7 @@ function removeTodo(todo) {
     renderTodoList();
 
     let calendarDayElement = findCalendarDateElement(todo.date);
-    updateTodoNumber(calendarDayElement);
+    if (!isMobileDevice) updateTodoNumber(calendarDayElement);
 }
 
 function sameDay(d1, d2) {
@@ -61,10 +61,16 @@ function sameDay(d1, d2) {
 //----------------------------------------------------------------
 
 
-function listenToCalendarClicks() {
-    let calendar = document.querySelector(".date-grid");
-    calendar.addEventListener("click", setSelectedDate);
-    calendar.addEventListener("click", addTodo);
+function listenToClicks() {
+    if (isMobileDevice) {
+        let button = document.querySelector(".Evenemang");
+        button.addEventListener("click", addTodo);
+    }
+    else {
+        let calendar = document.querySelector(".date-grid");
+        calendar.addEventListener("click", setSelectedDate);
+        calendar.addEventListener("click", addTodo);
+    }
 }
 
 function setSelectedDate(event) {
@@ -72,14 +78,21 @@ function setSelectedDate(event) {
 }
 
 function addTodo(event) {
-    if (event.target.className == "dateNr") {
-        let newTodo = createNewTodo(state.selectedDate);
-        if (newTodo !== undefined) {
-            state.todos.push(newTodo);
-            updateTodoNumber(event.target);
-        }
-        renderTodoList();
-    }
+    let buttonClass = getButtonClass();
+    if (event.target.className !== buttonClass) return;
+
+    let todoMessage;
+    let todoDate;
+    let newTodo;
+
+    if (isMobileDevice) todoDate = getNewTodoDate();
+    else todoDate = state.selectedDate;
+    if (todoDate !== undefined) todoMessage = getNewTodoMessage();
+    newTodo = createNewTodo(todoMessage, todoDate);
+
+    if (newTodo !== undefined) state.todos.push(newTodo);
+    if (!isMobileDevice) updateTodoNumber(event.target);
+    renderTodoList();
 }
 
 function getCalendarDate(calendarDayElement) {
@@ -88,12 +101,26 @@ function getCalendarDate(calendarDayElement) {
     return new Date(dateArray[0], dateArray[1] - 1, dateArray[2]);
 }
 
-function createNewTodo(todoDate) {
+function createNewTodo(todoMessage, todoDate) {
+    return { text: todoMessage, date: todoDate };
+}
+
+function getNewTodoMessage() {
     let todoMessage = prompt("Please enter item to do.", "");
     if (todoMessage !== null && todoMessage != "") {
-        return { text: todoMessage, date: todoDate };
+        return todoMessage;
     }
 }
+
+function getNewTodoDate() {
+    let todoDate = prompt("Please enter date for Todo item.", "yyyy-mm-dd");
+    let dateArray;
+    if (todoDate !== null && todoDate != "") {
+        dateArray = todoDate.split("-");
+        return new Date(dateArray[0], dateArray[1] - 1, dateArray[2]);
+    }
+}
+
 
 function updateTodoNumber(calendarDayElement) {
     let numOfTodos = filterTodoListBySelectedDate(state.todos).length;
@@ -105,4 +132,9 @@ function findCalendarDateElement(date) {
     let elementsArray = Array.from(elements.values());
 
     return elementsArray[date.getDate() - 1];
+}
+
+function getButtonClass() {
+    if (isMobileDevice) return "Evenemang";
+    else return "dateNr";
 }
