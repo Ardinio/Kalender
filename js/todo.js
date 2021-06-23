@@ -79,15 +79,15 @@ function setSelectedDate(event) {
 
 function addTodo(event) {
     let buttonClass = getButtonClass();
-    if (event.target.className !== buttonClass) return;
+    // if (event.target.className !== buttonClass) return;
 
     let todoMessage;
     let todoDate;
     let newTodo;
 
-    if (isMobileDevice) todoDate = getNewTodoDate();
+    if (isMobileDevice) todoDate = createNewTodoDate();
     else todoDate = state.selectedDate;
-    if (todoDate !== undefined) todoMessage = getNewTodoMessage();
+    if (todoDate !== undefined) todoMessage = createNewTodoMessage();
     newTodo = createNewTodo(todoMessage, todoDate);
 
     if (newTodo !== undefined) state.todos.push(newTodo);
@@ -105,22 +105,21 @@ function createNewTodo(todoMessage, todoDate) {
     return { text: todoMessage, date: todoDate };
 }
 
-function getNewTodoMessage() {
+function createNewTodoMessage() {
     let todoMessage = prompt("Please enter item to do.", "");
     if (todoMessage !== null && todoMessage != "") {
         return todoMessage;
     }
 }
 
-function getNewTodoDate() {
+function createNewTodoDate() {
     let todoDate = prompt("Please enter date for Todo item.", "yyyy-mm-dd");
     let dateArray;
     if (todoDate !== null && todoDate != "") {
         dateArray = todoDate.split("-");
-        return new Date(dateArray[0], dateArray[1] - 1, dateArray[2]);
+        return new Date(dateArray[0], dateArray[1] - 1, dateArray[2]); //Saknar felhantering
     }
 }
-
 
 function updateTodoNumber(calendarDayElement) {
     let numOfTodos = filterTodoListBySelectedDate(state.todos).length;
