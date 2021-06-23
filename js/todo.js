@@ -47,7 +47,9 @@ function removeTodo(todo) {
     const index = state.todos.indexOf(todo)
     state.todos.splice(index, 1)
     renderTodoList();
-    updateTodoNumber(); //Måste hitta rätt calendarelement för viss todo item.
+
+    let calendarDayElement = findCalendarDateElement(todo.date);
+    updateTodoNumber(calendarDayElement);
 }
 
 function sameDay(d1, d2) {
@@ -96,4 +98,11 @@ function createNewTodo(todoDate) {
 function updateTodoNumber(calendarDayElement) {
     let numOfTodos = filterTodoListBySelectedDate(state.todos).length;
     calendarDayElement.querySelector(".amountOfToDos").innerText = numOfTodos;
+}
+
+function findCalendarDateElement(date) {
+    let elements = document.querySelectorAll(".dateNr");
+    let elementsArray = Array.from(elements.values());
+
+    return elementsArray[date.getDate() - 1];
 }
