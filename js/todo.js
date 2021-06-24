@@ -106,7 +106,6 @@ function handleClicks(event) {
 function setSelectedDate(calendarDateElement) {
     state.selectedDate = getCalendarDate(calendarDateElement);
     renderTodoList();
-    console.log("render selected date")
 }
 
 function addTodo(calendarDateElement) {
