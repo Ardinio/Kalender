@@ -31,7 +31,7 @@
 }
 
 
-.day-of-week > * {
+.day-of-week>* {
   font-size: 1.2em;
   color: var(--blue-grey-900);
   font-weight: 500;
@@ -48,9 +48,9 @@
 
 /* Datum */
 .date-grid {
-  background-image: url(../images/sea-edge.png); 
+  background-image: url(../images/sea-edge.png);
   background-repeat: no-repeat;
-  background-size:cover; 
+  background-size: cover;
 }
 
 /* Här hamnar den första dagen*/
@@ -61,47 +61,52 @@
 
 .date-grid button {
   border: 0;
-  width:  var(--calendar-button-width-size);
-  height:  var(--calendar-button-hight-size);
+  width: var(--calendar-button-width-size);
+  height: var(--calendar-button-hight-size);
   background-color: transparent;
   border-bottom: 3px solid var(--teal-400);
-  border-radius: 0px 0px 85px 0px; 
-  box-shadow: 17px 11px 22px 4px rgba(154,154,154,0.85);
+  border-radius: 0px 0px 85px 0px;
+  box-shadow: 17px 11px 22px 4px rgba(154, 154, 154, 0.85);
   cursor: pointer;
 }
-#amountOfToDos{
-  position: relative;
-}
-.amountOfToDos{
-  font-family:Arial, Helvetica, sans-serif;
-  color:rgb(180, 5, 5);
-  position: absolute;
-  left: 19rem;
-  top: 7.2rem;
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-#img{
+
+#amountOfToDos {
   position: relative;
 }
 
-.date-grid button input {
+.amountOfToDos {
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  left: 3rem;
+  top: 2rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: rgb(228, 2, 2);
+  font-weight: 600;
+}
+
+#img {
+  position: relative;
+}
+
+.buttonImg {
   position: absolute;
   left: 6.3rem;
   top: 3.6rem;
   width: 1.5rem;
   filter: opacity(60%);
- 
+
+
 }
 
 .date-grid button .buttonImg :hover {
-  background-color:red;
+  background-color: red;
   filter: opacity(100%);
 }
 
 
 
-.dateNr{
+.dateNr {
   display: flex;
   color: var(--blue-grey-700);
   padding-left: .8vw;
@@ -110,7 +115,7 @@
   font-size: 2rem;
 }
 
-.dateNrOtherMonthDays{
+.dateNrOtherMonthDays {
   display: flex;
   color: var(--blue-grey-300);
   padding-left: .8vw;
@@ -131,8 +136,8 @@
 .date-grid button.is-selected {
   background-color: var(--teal-100);
   color: var(--teal-900);
-  border-right: 2px  solid var(--teal-500);
-  border-bottom: 3px  solid var(--teal-500);
-  border-radius: 0px 0px 85px 0px; 
-  box-shadow: 17px 11px 22px 4px rgba(154,154,154,0.85);
+  border-right: 2px solid var(--teal-500);
+  border-bottom: 3px solid var(--teal-500);
+  border-radius: 0px 0px 85px 0px;
+  box-shadow: 17px 11px 22px 4px rgba(154, 154, 154, 0.85);
 }

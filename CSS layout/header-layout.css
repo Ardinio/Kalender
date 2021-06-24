@@ -9,15 +9,15 @@
   background: url(../images/sea-edge.png);
   filter: opacity(60%);
   background-repeat: no-repeat;
-  background-size: 212vh 16vh; 
+  background-size: 212vh 16vh;
   justify-content: center;
   align-items: center;
 }
 
 .title {
-    color: black;
-    font-family: headerLogotype-font,Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size:5rem;
-    font-variant: small-caps;
-    text-shadow: 0 0 3px #ff009d, 0 0 5px #00ff9d;
-  }
+  color: black;
+  font-family: headerLogotype-font, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 5rem;
+  font-variant: small-caps;
+  text-shadow: 0 0 3px #ff009d, 0 0 5px #00ff9d;
+}

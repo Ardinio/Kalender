@@ -1,43 +1,45 @@
-@media (max-width: 576px)  {
-   
+@media (max-width: 576px) {
+
   body {
 
     background: url(../images/appbackground1.jpg);
     background-repeat: no-repeat;
-    background-size:cover; 
+    background-size: cover;
 
   }
+
   .grid-container {
     display: grid;
     grid-template-areas:
       'header'
       'menu';
   }
+
   .menu-container {
-   
+
     margin-top: 0;
     margin-left: 0;
     margin-right: 0;
     align-items: center;
-  
+
   }
-  
+
   .calendar-container {
     position: absolute;
     left: -9999px;
   }
 
-  .active-day{
+  .active-day {
     height: 15rem;
     border-radius: 0px;
     margin-bottom: 0rem;
     margin-left: 0;
     margin-right: 0;
     line-height: 1.25;
-    border:hidden;
+    border: hidden;
     box-shadow: 0px 0px 0px 0px rgb(0 0 0 / 0%), 0px 0px 0px 0px rgb(0 0 0 / 0%), 0px 0px 0px 0px rgb(0 0 0 / 0%);
-background-color: transparent;
-  
+    background-color: transparent;
+
   }
 
   .active-day-toDo-container {
@@ -67,9 +69,9 @@ background-color: transparent;
   }
 
 
-  .button-container{
-    
-    width:50%;
+  .button-container {
+
+    width: 50%;
     top: 15.2rem;
     left: 1rem;
 
@@ -81,7 +83,7 @@ background-color: transparent;
     border-color: #fdfdfb;
 
   }
-  
+
   .button-container button img {
     float: right;
     vertical-align: middle;
@@ -102,29 +104,29 @@ background-color: transparent;
     font-weight: bold;
     position: absolute;
     top: 5.5rem;
-    left:28rem;
+    left: 28rem;
   }
 
   .TodoList {
     font-size: 100%;
-  
+
   }
 
   li {
-    
+
     background-color: #ffffffb9;
 
-  
+
   }
 
   .header-container {
-    background-size: 80vh 9.5vh; 
+    background-size: 80vh 9.5vh;
   }
 
-  
+
 
   .title {
-    
+
     font-size: 2.7rem;
     text-shadow: 0 0 2px #fdfdfb, 0 0 4px #0e3486;
   }

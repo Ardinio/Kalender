@@ -100,9 +100,7 @@
   left: 10.6rem;
 }
 
-.Evenemang {
-  
-}
+.Evenemang {}
 
 
 .active-day-toDo-container {
@@ -120,7 +118,7 @@
   width: 100%;
   background: url(../images/sea-edge.png);
   background-repeat: no-repeat;
-  background-size:cover; 
+  background-size: cover;
 }
 
 .active-day-toDo-content {
@@ -168,7 +166,7 @@ li {
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: .7rem;
-  padding-bottom:.7rem;
+  padding-bottom: .7rem;
   border: 1px solid #000;
   background-color: #b3e2ddb9;
   box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%);
