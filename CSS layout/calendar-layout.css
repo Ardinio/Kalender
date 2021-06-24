@@ -72,10 +72,11 @@
 .amountOfToDos{
   font-family:Arial, Helvetica, sans-serif;
   color:rgb(180, 5, 5);
-  position: relative;
-  left: -1rem;
-  top: 1rem;
-  width: 1rem;
+  position: absolute;
+  left: 20.5rem;
+  top: 9.2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 #img{
   position: relative;
@@ -83,14 +84,14 @@
 
 .date-grid button input {
   position: absolute;
-  left: 3.5rem;
+  left: 6.3rem;
   top: 3.6rem;
   width: 1.5rem;
   filter: opacity(60%);
  
 }
 
-.date-grid button img :hover {
+.date-grid button .buttonImg :hover {
   background-color:red;
   filter: opacity(100%);
 }

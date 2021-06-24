@@ -88,10 +88,17 @@
     height: var(--calendar-button-tablet-hight-size);
   }
 
-  .date-grid button img {
-    left: 2rem;
-    top: 5.5rem;
-    width: 1.5rem;
+  .amountOfToDos{
+    position: absolute;
+    left: 5rem;
+    top: 38.2rem;
+    
+  }
+
+  .date-grid button .buttonImg {
+    position: absolute;
+    left: 4.8rem;
+    top: 5.4rem;
    
    
   }
