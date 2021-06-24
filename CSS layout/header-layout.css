@@ -6,7 +6,7 @@
 .header-container {
   grid-area: header;
   height: 4.7rem;
-  background: url(../images/triangles.png);
+  background: url(../images/sea-edge.png);
   filter: opacity(60%);
   background-repeat: no-repeat;
   background-size: 212vh 16vh; 

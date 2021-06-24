@@ -70,7 +70,7 @@ function listenToClicks() {
         calendar[i].addEventListener("click", handleClicks);
     }
 
-    let image = document.querySelectorAll(".dateNr.buttonImg");
+    let image = document.querySelectorAll(".dateNr .buttonImg");
     for (let j = 0; j < image.length; j++) {
         image[j].addEventListener("click", handleClicks);
     }
@@ -144,7 +144,7 @@ function updateTodoNumber(calendarDateElement) {
 
     calendarDateElement.querySelector(".amountOfToDos").innerText = numOfTodos;
     if (numOfTodos < 1) {
-        document.getElementsByClassName("amountOfToDos").style.display = "none";
+        calendarDateElement.querySelector(".amountOfToDos").innerText = "";
     }
 }
 
