@@ -6,9 +6,8 @@ function main() {
     initTodos()
 }
 
-function isMobileWidth() {
-    let isMobile = window.matchMedia('(max-width: 576px)');
-    return isMobile.matches;
+function hasMobileWidth() {
+    return window.matchMedia('(max-width: 576px)').matches;
 }
 
 const state = {
@@ -25,4 +24,4 @@ const state = {
     selectedDate: undefined
 }
 
-const isMobileDevice = isMobileWidth();
+const isMobile = hasMobileWidth();
