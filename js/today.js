@@ -5,21 +5,21 @@ function getTime() {
 function getWeekday() {
     let weekdayNumber = new Date().getUTCDay();
 
-    switch(weekdayNumber) {
+    switch (weekdayNumber) {
         case 0:
-            return "Måndag";
-        case 1:
-            return "Tisdag";
-        case 2:
-            return "Onsdag";
-        case 3:
-            return "Torsdag";
-        case 4:
-            return "Fredag";
-        case 5:
-            return "Lördag";
-        case 6:
             return "Söndag";
+        case 1:
+            return "Måndag";
+        case 2:
+            return "Tisdag";
+        case 3:
+            return "Onsdag";
+        case 4:
+            return "Torsdag";
+        case 5:
+            return "Fredag";
+        case 6:
+            return "Lördag";
     }
 }
 
@@ -27,10 +27,10 @@ function getDate() {
     return String(new Date().getUTCDate());
 }
 
-function getMonth(){
+function getMonth() {
     let monthNumber = new Date().getUTCMonth();
 
-    switch(monthNumber) {
+    switch (monthNumber) {
         case 0:
             return "januari";
         case 1:
