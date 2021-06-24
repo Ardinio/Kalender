@@ -147,7 +147,7 @@ function updateTodoNumber(calendarDateElement) {
 
     calendarDayElement.querySelector(".amountOfToDos").innerText = numOfTodos;
     if (numOfTodos < 1) {
-        document.getElementsByClassName("amountOfToDos").style.display = "none";  
+        calendarDateElement.querySelector(".amountOfToDos").innerText = "";  
     }
 }
 
