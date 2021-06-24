@@ -113,7 +113,7 @@ function addTodo(calendarDateElement) {
 
     if (calendarDateElement.className == "Evenemang") todoDate = createNewTodoDate();
     else todoDate = state.selectedDate;
-    if (todoDate === undefined || todoMessage === null || todoDate.length == 0) return;
+    if (todoDate === undefined || todoDate === null || todoDate.length == 0) return;
 
     todoMessage = createNewTodoMessage();
     if (todoMessage === undefined || todoMessage === null || todoMessage.length == 0) return;
@@ -147,7 +147,9 @@ function createNewTodoDate() {
     if (todoDate === null) return;
 
     let dateArray = todoDate.split("-");
-    return new Date(dateArray[0], dateArray[1] - 1, dateArray[2]); //Saknar felhantering
+    if (hasDateValidFormat(todoDate)) return new Date(dateArray[0], dateArray[1] - 1, dateArray[2]);
+    else return null;
+
 }
 
 function updateTodoNumber(calendarDateElement) {
@@ -164,4 +166,10 @@ function findCalendarDateElement(date) {
     let elementsArray = Array.from(elements.values());
 
     return elementsArray[date.getDate() - 1];
+}
+
+function hasDateValidFormat(dateString) {
+    let regex = /^\d{4}-\d{2}-\d{2}$/;
+    if (!regex.test(dateString)) return false;
+    return true;
 }
