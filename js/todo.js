@@ -65,14 +65,21 @@ function listenToClicks() {
     let button = document.querySelector(".Evenemang");
     button.addEventListener("click", handleClicks);
 
-    let calendar = document.querySelectorAll(".dateNr");
-    for (let i = 0; i < calendar.length; i++) {
-        calendar[i].addEventListener("click", handleClicks);
-    }
+    if (!isMobile) {
+        let calendar = document.querySelectorAll(".dateNr");
+        let time = document.querySelectorAll(".dateNr time");
+        let span = document.querySelectorAll(".dateNr span");
+        let image = document.querySelectorAll(".dateNr.buttonImg");
 
-    let image = document.querySelectorAll(".dateNr .buttonImg");
-    for (let j = 0; j < image.length; j++) {
-        image[j].addEventListener("click", handleClicks);
+        for (let i = 0; i < calendar.length; i++) {
+            calendar[i].addEventListener("click", handleClicks);
+            time[i].addEventListener("click", handleClicks);
+            span[i].addEventListener("click", handleClicks);
+        }
+
+        for (let j = 0; j < image.length; j++) {
+            image[j].addEventListener("click", handleClicks);
+        }
     }
 }
 
@@ -83,6 +90,10 @@ function handleClicks(event) {
         addTodo(clickedElement);
     }
     else if (event.target.className == "dateNr") {
+        setSelectedDate(clickedElement);
+    }
+    else if (event.target.tagName == "TIME" || event.target.tagName == "SPAN") {
+        clickedElement = event.target.parentNode;
         setSelectedDate(clickedElement);
     }
     else if (event.target.className == "buttonImg") {
@@ -110,7 +121,7 @@ function addTodo(calendarDateElement) {
     newTodo = createNewTodo(todoMessage, todoDate);
 
     state.todos.push(newTodo);
-    if (!isMobile) updateTodoNumber(calendarDateElement);
+    if (calendarDateElement.className !== "Evenemang") updateTodoNumber(calendarDateElement);
     else updateTodoNumber(findCalendarDateElement(newTodo.date));
 
     renderTodoList();
