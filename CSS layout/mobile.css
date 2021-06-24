@@ -110,6 +110,13 @@ background-color: transparent;
   
   }
 
+  li {
+    
+    background-color: #ffffffb9;
+
+  
+  }
+
   .header-container {
     background-size: 80vh 9.5vh; 
   }

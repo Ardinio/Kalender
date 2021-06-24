@@ -97,4 +97,7 @@ function createNewTodo(todoDate) {
 function updateTodoNumber(calendarDayElement) {
     let numOfTodos = filterTodoListBySelectedDate(state.todos).length;
     calendarDayElement.querySelector(".amountOfToDos").innerText = numOfTodos;
+    if (numOfTodos < 1) {
+        document.getElementsByClassName("amountOfToDos").style.display = "none";  
+    }
 }
