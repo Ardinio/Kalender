@@ -36,7 +36,8 @@ function createTodoElement(todo) {
     const li = document.createElement('li');
     li.innerText = todo.text;
     const button = document.createElement('button');
-    button.innerText = 'Remove';
+    button.classList.add("removeBtn"); 
+    button.innerHTML = '<img src="images/icons/removeicon.png" />';
     button.addEventListener('click', () => removeTodo(todo));
     li.append(button);
     return li;
@@ -143,7 +144,11 @@ function createNewTodoDate() {
 
 function updateTodoNumber(calendarDateElement) {
     let numOfTodos = filterTodoListBySelectedDate(state.todos).length;
-    calendarDateElement.querySelector(".amountOfToDos").innerText = numOfTodos;
+
+    calendarDayElement.querySelector(".amountOfToDos").innerText = numOfTodos;
+    if (numOfTodos < 1) {
+        document.getElementsByClassName("amountOfToDos").style.display = "none";  
+    }
 }
 
 function findCalendarDateElement(date) {

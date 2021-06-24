@@ -4,7 +4,7 @@
 
     background: url(../images/appbackground1.jpg);
     background-repeat: no-repeat;
-    background-size: 37rem 67rem; 
+    background-size:cover; 
 
   }
   .grid-container {
@@ -28,6 +28,7 @@
   }
 
   .active-day{
+    height: 15rem;
     border-radius: 0px;
     margin-bottom: 0rem;
     margin-left: 0;
@@ -40,7 +41,7 @@ background-color: transparent;
   }
 
   .active-day-toDo-container {
-    height: 18rem;
+    height: 44rem;
     border-radius: 0px;
     margin-bottom: 1.5rem;
     margin-left: 0;
@@ -68,18 +69,52 @@ background-color: transparent;
 
   .button-container{
     
-    flex-direction: column;
-    width:100%;
+    width:50%;
+    top: 15.2rem;
+    left: 1rem;
+
   }
 
   .button-container button {
-   
-    background-color: var(--white);
     padding: .70em .70em;
     font-size: 1.4rem;
- 
-    margin-bottom: 0.8rem;
+    border-color: #fdfdfb;
 
+  }
+  
+  .button-container button img {
+    float: right;
+    vertical-align: middle;
+    width: 30px;
+  }
+
+  .active-day-content-date {
+    font-size: 10rem;
+    float: left;
+    position: absolute;
+    top: 5rem;
+    left: 2rem;
+  }
+
+  .active-day-content-clock {
+    font-size: 1.5rem;
+    color: #0e3486;
+    font-weight: bold;
+    position: absolute;
+    top: 5.5rem;
+    left:28rem;
+  }
+
+  .TodoList {
+    font-size: 100%;
+  
+  }
+
+  li {
+    
+    background-color: #ffffffb9;
+
+  
   }
 
   .header-container {
