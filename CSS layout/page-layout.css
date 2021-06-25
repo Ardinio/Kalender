@@ -1,11 +1,10 @@
-
 .grid-container {
   display: grid;
   grid-template-areas:
     'header header'
     'menu calendar';
-    overflow: hidden;
-    
+  overflow: hidden;
+
 }
 
 .grid-container>div {

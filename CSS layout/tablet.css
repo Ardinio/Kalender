@@ -3,7 +3,7 @@
   body {
 
     background: url(../images/tabletbckg.jpg);
-    background-size: 50rem 90rem; 
+    background-size: 50rem 90rem;
 
   }
 
@@ -21,21 +21,62 @@
 
 
   .button-container {
-    display: flex;
-    width: 100%;
+    position: absolute;
+    top: 13.5rem;
+    left: 35rem;
+    width: 25%;
+
   }
+
+  .button-container button {
+    color: rgb(7, 24, 173);
+    font-weight: bold;
+    background-color: transparent;
+    border-radius: 8px;
+    border-style: solid;
+    border: size 1px;
+    border-color: var(--teal-600);
+    box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+
+
+
+  }
+
+
 
   .active-day {
     background-color: transparent;
+    height: 12rem;
   }
 
 
 
   .active-day-toDo-container {
-    height: 11rem;
+    height: 16rem;
     width: 100%;
   }
 
+  .active-day-content-date {
+    font-size: 11rem;
+    float: left;
+    position: absolute;
+    top: 5rem;
+    left: 2rem;
+  }
+
+  .active-day-content-clock {
+    font-size: 1.5rem;
+    color: #0e3486;
+    font-weight: bold;
+    position: absolute;
+    top: 5.5rem;
+    left: 41rem;
+  }
+
+  .TodoList {
+    font-size: 90%;
+
+  }
 
   .day-of-week>* {
     font-size: 1.2em;
@@ -45,6 +86,21 @@
   .date-grid button {
     width: var(--calendar-button-tablet-width-size);
     height: var(--calendar-button-tablet-hight-size);
+  }
+
+  .amountOfToDos {
+    position: absolute;
+    left: 5rem;
+    top: 38.2rem;
+
+  }
+
+  .date-grid button .buttonImg {
+    position: absolute;
+    left: 4.8rem;
+    top: 5.4rem;
+
+
   }
 
   .active-day-toDo-content p {

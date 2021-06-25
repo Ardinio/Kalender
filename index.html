@@ -19,7 +19,6 @@
 </head>
 
 <body>
-
   <div class="grid-container">
     <div class="header-container">
       <div class="title">
@@ -35,25 +34,15 @@
       </div>
       <div class="active-day-toDo-container">
         <div class="active-day-toDo-content">
-          <div class="toDo-title">
-            Todo
+          <div class="button-container">
+            <button class="Evenemang">Lägg till en ToDo
+              <img src="images/icons/schedule.png" alt="calendar add toDo icon">
+            </button>
           </div>
           <ul class="TodoList">
-            <template id="todo-item-template">
-              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-            </template>
           </ul>
         </div>
       </div>
-      <div class="button-container">
-        <button id="Evenemang">Lägg till evenemang<img src="images/icons/schedule.png"
-            alt="calendar add toDo icon"></button>
-        <button id="Helgdag">Lägg till helgdag<img src="images/icons/schedule.png"
-            alt="calendar add toDo icon"></button>
-      </div>
-
-
-
     </div>
     <div class="calendar-container">
       <div class="calendar">
@@ -66,188 +55,186 @@
           <div>Fredag</div>
           <div>Lördag</div>
         </div>
-
-        <div class="date-grid">
+        <div class="date-grid" id="days">
           <button class="dateNrOtherMonthDays">
+            <input class="buttonImg" type="image" id="img" src="images/icons/calendar1.png" alt="planed toDo icon">
+            <span class="amountOfToDos" id="amountOfToDos"></span>
             <time datetime="2021-05-30">30</time>
-            <img src="images/icons/calendar1.png" alt="planed toDo icon">
-            <span id="amountOfToDos">2</span>
           </button>
           <button class="dateNrOtherMonthDays">
+            <input class="buttonImg" type="image" id="img" src="images/icons/calendar1.png" alt="planed toDo icon">
+            <span class="amountOfToDos" id="amountOfToDos"></span>
             <time datetime="2021-05-31">31</time>
-            <img src="images/icons/calendar1.png" style="display: none;" alt="planed toDo icon">
-            <span id="amountOfToDos" style="display: none;">2</span>
           </button>
           <button class="dateNr">
+            <input class="buttonImg" type="image" id="img" src="images/icons/calendar1.png" alt="planed toDo icon">
+            <span class="amountOfToDos" id="amountOfToDos"></span>
             <time datetime="2021-06-01">1</time>
-            <img src="images/icons/calendar1.png" style="display: none;" alt="planed toDo icon">
-            <span id="amountOfToDos" style="display: none;">2</span>
           </button>
           <button class="dateNr">
+            <input class="buttonImg" type="image" id="img" src="images/icons/calendar1.png" alt="planed toDo icon">
+            <span class="amountOfToDos" id="amountOfToDos"></span>
             <time datetime="2021-06-02">2</time>
-            <img src="images/icons/calendar1.png" style="display: none;" alt="planed toDo icon">
-            <span id="amountOfToDos" style="display: none;">2</span>
           </button>
           <button class="dateNr">
+            <input class="buttonImg" type="image" id="img" src="images/icons/calendar1.png" alt="planed toDo icon">
+            <span class="amountOfToDos" id="amountOfToDos"></span>
             <time datetime="2021-06-03">3</time>
-            <img src="images/icons/calendar1.png" style="display: none;" alt="planed toDo icon">
-            <span id="amountOfToDos" style="display: none;">2</span>
           </button>
           <button class="dateNr">
+            <input class="buttonImg" type="image" id="img" src="images/icons/calendar1.png" alt="planed toDo icon">
+            <span class="amountOfToDos" id="amountOfToDos"></span>
             <time datetime="2021-06-04">4</time>
-            <img src="images/icons/calendar1.png" style="display: none;" alt="planed toDo icon">
-            <span id="amountOfToDos" style="display: none;">2</span>
           </button>
           <button class="dateNr">
+            <input class="buttonImg" type="image" id="img" src="images/icons/calendar1.png" alt="planed toDo icon">
+            <span class="amountOfToDos" id="amountOfToDos"></span>
             <time datetime="2021-06-05">5</time>
-            <img src="images/icons/calendar1.png" style="display: none;" alt="planed toDo icon">
-            <span id="amountOfToDos" style="display: none;">2</span>
           </button>
           <button class="dateNr">
+            <input class="buttonImg" type="image" id="img" src="images/icons/calendar1.png" alt="planed toDo icon">
+            <span class="amountOfToDos" id="amountOfToDos"></span>
             <time datetime="2021-06-06">6</time>
-            <img src="images/icons/calendar1.png" style="display: none;" alt="planed toDo icon">
-            <span id="amountOfToDos" style="display: none;">2</span>
           </button>
           <button class="dateNr">
+            <input class="buttonImg" type="image" id="img" src="images/icons/calendar1.png" alt="planed toDo icon">
+            <span class="amountOfToDos" id="amountOfToDos"></span>
             <time datetime="2021-06-07">7</time>
-            <img src="images/icons/calendar1.png" style="display: none;" alt="planed toDo icon">
-            <span id="amountOfToDos" style="display: none;">2</span>
           </button>
           <button class="dateNr">
+            <input class="buttonImg" type="image" id="img" src="images/icons/calendar1.png" alt="planed toDo icon">
+            <span class="amountOfToDos" id="amountOfToDos"></span>
             <time datetime="2021-06-08">8</time>
-            <img src="images/icons/calendar1.png" style="display: none;" alt="planed toDo icon">
-            <span id="amountOfToDos" style="display: none;">2</span>
           </button>
           <button class="dateNr">
+            <input class="buttonImg" type="image" id="img" src="images/icons/calendar1.png" alt="planed toDo icon">
+            <span class="amountOfToDos" id="amountOfToDos"></span>
             <time datetime="2021-06-09">9</time>
-            <img src="images/icons/calendar1.png" style="display: none;" alt="planed toDo icon">
-            <span id="amountOfToDos" style="display: none;">2</span>
           </button>
           <button class="dateNr">
+            <input class="buttonImg" type="image" id="img" src="images/icons/calendar1.png" alt="planed toDo icon">
+            <span class="amountOfToDos" id="amountOfToDos"></span>
             <time datetime="2021-06-10">10</time>
-            <img src="images/icons/calendar1.png" style="display: none;" alt="planed toDo icon">
-            <span id="amountOfToDos" style="display: none;">2</span>
           </button>
           <button class="dateNr">
+            <input class="buttonImg" type="image" id="img" src="images/icons/calendar1.png" alt="planed toDo icon">
+            <span class="amountOfToDos" id="amountOfToDos"></span>
             <time datetime="2021-06-11">11</time>
-            <img src="images/icons/calendar1.png" style="display: none;" alt="planed toDo icon">
-            <span id="amountOfToDos" style="display: none;">2</span>
           </button>
           <button class="dateNr">
+            <input class="buttonImg" type="image" id="img" src="images/icons/calendar1.png" alt="planed toDo icon">
+            <span class="amountOfToDos" id="amountOfToDos"></span>
             <time datetime="2021-06-12">12</time>
-            <img src="images/icons/calendar1.png" style="display: none;" alt="planed toDo icon">
-            <span id="amountOfToDos" style="display: none;">2</span>
           </button>
           <button class="dateNr">
+            <input class="buttonImg" type="image" id="img" src="images/icons/calendar1.png" alt="planed toDo icon">
+            <span class="amountOfToDos" id="amountOfToDos"></span>
             <time datetime="2021-06-13">13</time>
-            <img src="images/icons/calendar1.png" style="display: none;" alt="planed toDo icon">
-            <span id="amountOfToDos" style="display: none;">2</span>
           </button>
           <button class="dateNr">
+            <input class="buttonImg" type="image" id="img" src="images/icons/calendar1.png" alt="planed toDo icon">
+            <span class="amountOfToDos" id="amountOfToDos"></span>
             <time datetime="2021-06-14">14</time>
-            <img src="images/icons/calendar1.png" style="display: none;" alt="planed toDo icon">
-            <span id="amountOfToDos" style="display: none;">2</span>
           </button>
           <button class="dateNr">
+            <input class="buttonImg" type="image" id="img" src="images/icons/calendar1.png" alt="planed toDo icon">
+            <span class="amountOfToDos" id="amountOfToDos"></span>
             <time datetime="2021-06-15">15</time>
-            <img src="images/icons/calendar1.png" style="display: none;" alt="planed toDo icon">
-            <span id="amountOfToDos" style="display: none;">2</span>
           </button>
           <button class="dateNr">
+            <input class="buttonImg" type="image" id="img" src="images/icons/calendar1.png" alt="planed toDo icon">
+            <span class="amountOfToDos" id="amountOfToDos"></span>
             <time datetime="2021-06-16">16</time>
-            <img src="images/icons/calendar1.png" style="display: none;" alt="planed toDo icon">
-            <span id="amountOfToDos" style="display: none;">2</span>
           </button>
           <button class="dateNr">
+            <input class="buttonImg" type="image" id="img" src="images/icons/calendar1.png" alt="planed toDo icon">
+            <span class="amountOfToDos" id="amountOfToDos"></span>
             <time datetime="2021-06-17">17</time>
-            <img src="images/icons/calendar1.png" style="display: none;" alt="planed toDo icon">
-            <span id="amountOfToDos" style="display: none;">2</span>
           </button>
           <button class="dateNr">
+            <input class="buttonImg" type="image" id="img" src="images/icons/calendar1.png" alt="planed toDo icon">
+            <span class="amountOfToDos" id="amountOfToDos"></span>
             <time datetime="2021-06-18">18</time>
-            <img src="images/icons/calendar1.png" style="display: none;" alt="planed toDo icon">
-            <span id="amountOfToDos" style="display: none;">2</span>
           </button>
           <button class="dateNr">
+            <input class="buttonImg" type="image" id="img" src="images/icons/calendar1.png" alt="planed toDo icon">
+            <span class="amountOfToDos" id="amountOfToDos"></span>
             <time datetime="2021-06-19">19</time>
-            <img src="images/icons/calendar1.png" style="display: none;" alt="planed toDo icon">
-            <span id="amountOfToDos" style="display: none;">2</span>
           </button>
           <button class="dateNr">
+            <input class="buttonImg" type="image" id="img" src="images/icons/calendar1.png" alt="planed toDo icon">
+            <span class="amountOfToDos" id="amountOfToDos"></span>
             <time datetime="2021-06-20">20</time>
-            <img src="images/icons/calendar1.png" style="display: none;" alt="planed toDo icon">
-            <span id="amountOfToDos" style="display: none;">2</span>
           </button>
           <button class="dateNr">
+            <input class="buttonImg" type="image" id="img" src="images/icons/calendar1.png" alt="planed toDo icon">
+            <span class="amountOfToDos" id="amountOfToDos"></span>
             <time datetime="2021-06-21">21</time>
-            <img src="images/icons/calendar1.png" style="display: none;" alt="planed toDo icon">
-            <span id="amountOfToDos" style="display: none;">2</span>
           </button>
           <button class="dateNr">
+            <input class="buttonImg" type="image" id="img" src="images/icons/calendar1.png" alt="planed toDo icon">
+            <span class="amountOfToDos" id="amountOfToDos"></span>
             <time datetime="2021-06-22">22</time>
-            <img src="images/icons/calendar1.png" style="display: none;" alt="planed toDo icon">
-            <span id="amountOfToDos" style="display: none;">2</span>
           </button>
           <button class="dateNr">
+            <input class="buttonImg" type="image" id="img" src="images/icons/calendar1.png" alt="planed toDo icon">
+            <span class="amountOfToDos" id="amountOfToDos"></span>
             <time datetime="2021-06-23">23</time>
-            <img src="images/icons/calendar1.png" style="display: none;" alt="planed toDo icon">
-            <span id="amountOfToDos" style="display: none;">2</span>
           </button>
           <button class="dateNr">
+            <input class="buttonImg" type="image" id="img" src="images/icons/calendar1.png" alt="planed toDo icon">
+            <span class="amountOfToDos" id="amountOfToDos"></span>
             <time datetime="2021-06-24">24</time>
-            <img src="images/icons/calendar1.png" style="display: none;" alt="planed toDo icon">
-            <span id="amountOfToDos" style="display: none;">2</span>
           </button>
           <button class="dateNr">
+            <input class="buttonImg" type="image" id="img" src="images/icons/calendar1.png" alt="planed toDo icon">
+            <span class="amountOfToDos" id="amountOfToDos"></span>
             <time datetime="2021-06-25">25</time>
-            <img src="images/icons/calendar1.png" style="display: none;" alt="planed toDo icon">
-            <span id="amountOfToDos" style="display: none;">2</span>
           </button>
           <button class="dateNr">
+            <input class="buttonImg" type="image" id="img" src="images/icons/calendar1.png" alt="planed toDo icon">
+            <span class="amountOfToDos" id="amountOfToDos"></span>
             <time datetime="2021-06-26">26</time>
-            <img src="images/icons/calendar1.png" style="display: none;" alt="planed toDo icon">
-            <span id="amountOfToDos" style="display: none;">2</span>
           </button>
           <button class="dateNr">
+            <input class="buttonImg" type="image" id="img" src="images/icons/calendar1.png" alt="planed toDo icon">
+            <span class="amountOfToDos" id="amountOfToDos"></span>
             <time datetime="2021-06-27">27</time>
-            <img src="images/icons/calendar1.png" style="display: none;" alt="planed toDo icon">
-            <span id="amountOfToDos" style="display: none;">2</span>
           </button>
           <button class="dateNr">
+            <input class="buttonImg" type="image" id="img" src="images/icons/calendar1.png" alt="planed toDo icon">
+            <span class="amountOfToDos" id="amountOfToDos"></span>
             <time datetime="2021-06-28">28</time>
-            <img src="images/icons/calendar1.png" style="display: none;" alt="planed toDo icon">
-            <span id="amountOfToDos" style="display: none;">2</span>
           </button>
           <button class="dateNr">
+            <input class="buttonImg" type="image" id="img" src="images/icons/calendar1.png" alt="planed toDo icon">
+            <span class="amountOfToDos" id="amountOfToDos"></span>
             <time datetime="2021-06-28">29</time>
-            <img src="images/icons/calendar1.png" style="display: none;" alt="planed toDo icon">
-            <span id="amountOfToDos" style="display: none;">2</span>
           </button>
           <button class="dateNr">
+            <input class="buttonImg" type="image" id="img" src="images/icons/calendar1.png" alt="planed toDo icon">
+            <span class="amountOfToDos" id="amountOfToDos"></span>
             <time datetime="2021-06-28">30</time>
-            <img src="images/icons/calendar1.png" style="display: none;" alt="planed toDo icon">
-            <span id="amountOfToDos" style="display: none;">2</span>
           </button>
           <button class="dateNrOtherMonthDays">
+            <input class="buttonImg" type="image" id="img" src="images/icons/calendar1.png" alt="planed toDo icon">
+            <span class="amountOfToDos" id="amountOfToDos"></span>
             <time datetime="2021-07-28">1</time>
-            <img src="images/icons/calendar1.png" style="display: none;" alt="planed toDo icon">
-            <span id="amountOfToDos" style="display: none;">2</span>
           </button>
           <button class="dateNrOtherMonthDays">
+            <input class="buttonImg" type="image" id="img" src="images/icons/calendar1.png" alt="planed toDo icon">
+            <span class="amountOfToDos" id="amountOfToDos"></span>
             <time datetime="2021-07-28">2</time>
-            <img src="images/icons/calendar1.png" style="display: none;" alt="planed toDo icon">
-            <span id="amountOfToDos" style="display: none;">2</span>
           </button>
           <button class="dateNrOtherMonthDays">
+            <input class="buttonImg" type="image" id="img" src="images/icons/calendar1.png" alt="planed toDo icon">
+            <span class="amountOfToDos" id="amountOfToDos"></span>
             <time datetime="2021-07-28">3</time>
-            <img src="images/icons/calendar1.png" style="display: none;" alt="planed toDo icon">
-            <span id="amountOfToDos" style="display: none;">2</span>
           </button>
         </div>
       </div>
     </div>
   </div>
-  <script src=scripts/currentDate.js"></script>
 </body>
 
 </html>
