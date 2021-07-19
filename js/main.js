@@ -12,18 +12,7 @@ function hasMobileWidth() {
 
 const state = {
   todos: [
-    {
-      text: "Ska jobba med skola",
-      date: new Date(2021, 06, 05),
-    },
-    {
-      text: "Lorem ipsum dolor elit.",
-      date: new Date(2021, 06, 01),
-    },
-    {
-      text: "Lorem ipsum adipisicing elit.",
-      date: new Date(2021, 06, 21),
-    },
+    
   ],
   selectedDate: undefined,
 };

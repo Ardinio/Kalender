@@ -4,45 +4,35 @@
 
     background: url(../images/appbackground1.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:auto;
+  
 
   }
 
-  .grid-container {
-    display: grid;
-    grid-template-areas:
-      'header'
-      'menu';
-  }
 
-  .menu-container {
 
-    margin-top: 0;
-    margin-left: 0;
-    margin-right: 0;
-    align-items: center;
-
-  }
+ 
 
   .calendar-container {
-    position: absolute;
-    left: -9999px;
+    display: none;
   }
 
   .active-day {
+    width: 98vw;
     height: 15rem;
     border-radius: 0px;
     margin-bottom: 0rem;
     margin-left: 0;
     margin-right: 0;
     line-height: 1.25;
-    border: hidden;
+    border: visible;
     box-shadow: 0px 0px 0px 0px rgb(0 0 0 / 0%), 0px 0px 0px 0px rgb(0 0 0 / 0%), 0px 0px 0px 0px rgb(0 0 0 / 0%);
     background-color: transparent;
 
   }
 
   .active-day-toDo-container {
+    width: 98vw;
     height: 44rem;
     border-radius: 0px;
     margin-bottom: 1.5rem;
@@ -56,24 +46,23 @@
   }
 
   .active-day-toDo-content p {
-    font-size: .8rem;
+    font-size: 1vw;
   }
 
   .toDo-title {
-    font-size: 1.3rem;
+    font-size: 1vw;
   }
 
   .day-active {
 
-    font-size: 2rem;
+    font-size: 1vw;
   }
 
 
   .button-container {
-
-    width: 50%;
-    top: 15.2rem;
-    left: 1rem;
+    top: 182.2px;
+    position: absolute;
+    width: 98vw;
 
   }
 
@@ -91,20 +80,17 @@
   }
 
   .active-day-content-date {
-    font-size: 10rem;
-    float: left;
-    position: absolute;
-    top: 5rem;
-    left: 2rem;
+    font-size: 28vw;
+    top: 23px;
+    left: 18px;
   }
 
   .active-day-content-clock {
-    font-size: 1.5rem;
-    color: #0e3486;
-    font-weight: bold;
-    position: absolute;
-    top: 5.5rem;
-    left: 28rem;
+    
+    color: #ffc30e;
+    top: 127px;
+    left: 364px;
+    font-size: 6vw;
   }
 
   .TodoList {
@@ -119,16 +105,19 @@
 
   }
 
-  .header-container {
-    background-size: 80vh 9.5vh;
-  }
-
-
 
   .title {
 
-    font-size: 2.7rem;
+    font-size: 7.7vw;
     text-shadow: 0 0 2px #fdfdfb, 0 0 4px #0e3486;
   }
 
+  .header-container {
+    position:initial;
+    
+  }
+
+
+
 }
+

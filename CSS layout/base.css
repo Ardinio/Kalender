@@ -35,12 +35,19 @@
   --blue-grey-700: #334e68;
   --blue-grey-800: #243b53;
   --blue-grey-900: #102a43;
-  --calendar-button-width-size: 8.45rem;
-  --calendar-button-hight-size: 5.75rem;
+
   --calendar-button-tablet-width-size: 6.76rem;
   --calendar-button-tablet-hight-size: 7.52rem;
   --margin-spacing: .25rem;
 }
+
+body, html { 
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
 
 html {
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
@@ -51,8 +58,7 @@ body {
 
   background: url(../images/tabletbckg.jpg);
   background-repeat: no-repeat;
-  background-size: 90rem 100rem;
-  margin: 0;
-
+  background-size:auto;
+  
 
 }

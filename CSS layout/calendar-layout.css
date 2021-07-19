@@ -6,10 +6,10 @@
 
 .calendar-container {
   grid-area: calendar;
-  width: min-content;
-  height: min-content;
+ 
+  width: 71%;
   overflow: hidden;
-  margin: var(--margin-spacing);
+  margin-left: .5rem;
   border-radius: 8px;
   border-style: solid;
   border: size 1px;
@@ -32,16 +32,15 @@
 
 
 .day-of-week>* {
-  font-size: 1.2em;
+  font-size: 1.5vw;
   color: var(--blue-grey-900);
   font-weight: 500;
   letter-spacing: 0.1em;
   font-variant: small-caps;
   text-align: center;
-  padding-bottom: .2rem;
+  padding-bottom: .2rem; 
   padding-top: .2rem;
   background-color: #d0e4e3;
-  width: var(--calendar-button-width-size);
 
 }
 
@@ -51,6 +50,8 @@
   background-image: url(../images/sea-edge.png);
   background-repeat: no-repeat;
   background-size: cover;
+  height: 96%;
+  width: 100%;
 }
 
 /* Här hamnar den första dagen*/
@@ -61,8 +62,7 @@
 
 .date-grid button {
   border: 0;
-  width: var(--calendar-button-width-size);
-  height: var(--calendar-button-hight-size);
+  
   background-color: transparent;
   border-bottom: 3px solid var(--teal-400);
   border-radius: 0px 0px 85px 0px;
@@ -71,33 +71,23 @@
 }
 
 #amountOfToDos {
-  position: relative;
 }
 
 .amountOfToDos {
   font-family: Arial, Helvetica, sans-serif;
   position: absolute;
-  left: 3rem;
-  top: 2rem;
-  font-size: 1.3rem;
+  right: 15.6px;
+  top: 82.2px;
+  font-size: 1.5vw;
   font-weight: bold;
   color: rgb(228, 2, 2);
   font-weight: 600;
 }
 
 #img {
-  position: relative;
 }
 
-.buttonImg {
-  position: absolute;
-  left: 6.3rem;
-  top: 3.6rem;
-  width: 1.5rem;
-  filter: opacity(60%);
 
-
-}
 
 .date-grid button .buttonImg :hover {
   background-color: red;
@@ -109,19 +99,31 @@
 .dateNr {
   display: flex;
   color: var(--blue-grey-700);
-  padding-left: .8vw;
-  padding-top: .8vw;
+  
   font-family: calenderNumbers-font;
-  font-size: 2rem;
+  font-size: 2.3vw;
+  position: relative;
 }
+
+
 
 .dateNrOtherMonthDays {
   display: flex;
   color: var(--blue-grey-300);
-  padding-left: .8vw;
-  padding-top: .8vw;
+  
   font-family: calenderNumbers-font;
-  font-size: 2rem;
+  font-size: 2.3vw;
+  position: relative;
+}
+
+.buttonImg {
+  position: absolute;
+  left: 0.5px;
+  top: 65.5px;
+  width: 2vw;
+  filter: opacity(60%);
+
+
 }
 
 

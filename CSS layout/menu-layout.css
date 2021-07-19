@@ -7,9 +7,11 @@
 .menu-container {
   grid-area: menu;
   flex-direction: column;
-  margin: var(--margin-spacing);
   align-items: center;
-  min-width: 15rem;
+  width: 29%;
+  
+  height: 100vh;
+  
 
 }
 
@@ -28,7 +30,7 @@
   background-color: #90cde9;
   box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%);
   padding: .50em .50em;
-  font-size: 1rem;
+  font-size: 1.6vw;
   transition: background-color 250ms cubic-bezier(.4, 0, .2, 1) 0s, box-shadow 250ms cubic-bezier(.4, 0, .2, 1) 0s, border 250ms cubic-bezier(.4, 0, .2, 1) 0s;
   text-decoration: none;
   margin-bottom: 0.50rem;
@@ -53,6 +55,7 @@
 
   display: flex;
   width: 100%;
+  height: 22vh;
   overflow: hidden;
   background-color: transparent;
   border-radius: 8px;
@@ -63,6 +66,7 @@
   border-color: var(--teal-600);
   box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
   min-height: 6rem;
+  position: relative;
 }
 
 .active-day-content {
@@ -86,27 +90,26 @@
 
 .active-day-content-date {
   font-family: 'datum-font', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 4.5rem;
+  font-size: 8vw;
   float: left;
   position: absolute;
-  top: 6rem;
-  left: 1rem;
+  top: 17px;
+  left: 22px;
 }
 
 .active-day-content-clock {
 
-  position: absolute;
-  top: 9.4rem;
-  left: 10.6rem;
+  position: sticky;
+  top: 129px;
+    left: 250px;
+    font-size: 2.6vw;
 }
 
 .Evenemang {}
 
-
 .active-day-toDo-container {
   flex-grow: 1;
   display: flex;
-  height: 0;
   overflow: hidden;
   background-color: #e8efee;
   border-radius: 8px;
@@ -116,6 +119,7 @@
   border-color: var(--teal-600);
   box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
   width: 100%;
+  height: 76vh;
   background: url(../images/sea-edge.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -136,7 +140,7 @@
 }
 
 .toDo-title {
-  font-size: 2.2rem;
+  font-size: 2.2vw;
 }
 
 .day-active {
@@ -147,7 +151,7 @@
 .TodoList {
 
   text-align: left;
-  font-size: 80%;
+  font-size: 1.3vw;
 
 }
 
@@ -160,9 +164,6 @@ ul {
 }
 
 li {
-  background-image: url("/images/icons/bullet-arrow.png");
-  background-repeat: no-repeat;
-  background-position: 1px;
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: .7rem;
