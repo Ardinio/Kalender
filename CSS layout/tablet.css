@@ -1,15 +1,6 @@
 @media (max-width: 768px) {
 
  
- 
-
-  .grid-container {
-    display: grid;
-    grid-template-areas:
-      'header'
-      'menu'
-      'calendar';
-  }
 
 
   .menucalender-container{
@@ -22,13 +13,14 @@
     display:none !important;
   }
 
-  .active-day {
-    width: 98.5vw;
-    
+
+  .menu-container {
+    width: 100%;
 }
 
+
 .active-day-toDo-container {
-  width: 98.5vw;
+  
   height: 46vh;
 }
 
@@ -39,15 +31,15 @@
 
 .active-day-content-clock {
   position: absolute;
-  top: 72px;
-  left: 31px;
+  top: 81px;
+  left: 25px;
   font-size: 2vw;
 }
 
 .calendar-container {
-  width: 98.5vw;
+  width: 98.8%;
   position: absolute;
-  top: 330px;
+  top: 385px;
   margin-left: 0rem;
   height: 100vh;
 }
