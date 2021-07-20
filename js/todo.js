@@ -110,9 +110,9 @@ function setSelectedDate(calendarDateElement) {
 function addTodo(calendarDateElement) {
   let todoMessage, todoDate, newTodo;
 
-    if (calendarDateElement.className == "Evenemang") todoDate = createNewTodoDate();
-    else todoDate = state.selectedDate;
-    if (todoDate === undefined || todoDate === null || todoDate.length == 0) return;
+  if (calendarDateElement.className == "Evenemang") todoDate = createNewTodoDate();
+  else todoDate = state.selectedDate;
+  if (todoDate === undefined || todoDate === null || todoDate.length == 0) return;
 
   todoMessage = createNewTodoMessage();
   if (
@@ -151,9 +151,9 @@ function createNewTodoDate() {
   let todoDate = prompt("Please enter date for Todo item.", "yyyy-mm-dd");
   if (todoDate === null) return;
 
-    let dateArray = todoDate.split("-");
-    if (hasDateValidFormat(todoDate)) return new Date(dateArray[0], dateArray[1] - 1, dateArray[2]);
-    else return null;
+  let dateArray = todoDate.split("-");
+  if (hasDateValidFormat(todoDate)) return new Date(dateArray[0], dateArray[1] - 1, dateArray[2]);
+  else return null;
 
 }
 
@@ -166,15 +166,27 @@ function updateTodoNumber(calendarDateElement) {
   }
 }
 
+/**
+ * findCalendarDateElement(Date) tar ett Date-objekt och returnerar button-element med 
+ * CSS-klass "dateNr" och motsvarande datum.
+ * 
+ * @param {Date} date
+ * @returns {Element}
+ */
 function findCalendarDateElement(date) {
   let elements = document.querySelectorAll(".dateNr");
-  let elementsArray = Array.from(elements.values());
+  let numericDate = date.getDate();
+  let returnElement;
 
-    return elementsArray[date.getDate() - 1];
+  for (const dateNrElement of elements) {
+    if(dateNrElement.children[2].innerHTML == numericDate) returnElement = dateNrElement;
+  }
+
+  return returnElement;
 }
 
 function hasDateValidFormat(dateString) {
-    let regex = /^\d{4}-\d{2}-\d{2}$/;
-    if (!regex.test(dateString)) return false;
-    return true;
+  let regex = /^\d{4}-\d{2}-\d{2}$/;
+  if (!regex.test(dateString)) return false;
+  return true;
 }
