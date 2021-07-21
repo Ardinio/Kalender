@@ -60,9 +60,8 @@
 
 
   .button-container {
-    top: 182.2px;
-    position: absolute;
-    width: 98.5%;
+    position: sticky;
+    width: 100%;
 
   }
 

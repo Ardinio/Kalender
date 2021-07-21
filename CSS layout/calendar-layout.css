@@ -75,9 +75,8 @@
 
 .amountOfToDos {
   font-family: Arial, Helvetica, sans-serif;
-  position: absolute;
-  right: 15.6px;
-  top: 82.2px;
+  position: sticky;
+  top: 91.2px;
   font-size: 1.5vw;
   font-weight: bold;
   color: rgb(228, 2, 2);
@@ -117,9 +116,8 @@
 }
 
 .buttonImg {
-  position: absolute;
-  left: 0.5px;
-  top: 65.5px;
+  position: sticky;
+  top: 520px;
   width: 2vw;
   filter: opacity(60%);
 
